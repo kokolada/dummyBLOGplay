@@ -15,3 +15,18 @@ Route::get('/',array(
 	'as' => 'home',
 	'uses' => 'HomeController@Home'
 ));
+
+Route::get('/partneri', array(
+	'as' => 'partneri',
+	'uses' => 'HomeController@Partneri'
+));
+
+Route::get('/partneri/{id}', array(
+	'as' => 'partner',
+	'uses' => 'HomeController@Partner'
+));
+
+Route::get('/uclani-se', array(
+	'as' => 'clanstvo',
+	'uses' => 'HomeController@Clanstvo'
+));

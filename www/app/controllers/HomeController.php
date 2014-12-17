@@ -2,22 +2,24 @@
 
 class HomeController extends BaseController {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
-
 	public function Home(){
 		
 		return View::make('home');
 	}
 
+
+	public function Partneri(){
+
+		return View::make('partneri');
+	}
+
+	public function Partner(){
+
+		return View::make('parner');
+	}
+
+	public function Clanstvo(){
+
+		return View::make('clanstvo');
+	}
 }
