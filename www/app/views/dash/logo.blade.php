@@ -3,6 +3,7 @@
 @section('content')
 @include('layout.dashbar')
 
-logo
+<p>{{$logo}}</p>
+<input type="file">
 
 @stop

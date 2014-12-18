@@ -23,7 +23,8 @@ CREATE TABLE Vijesti(
 CREATE TABLE baneri(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	naziv VARCHAR(20),
-	slika VARCHAR(100)
+	slika VARCHAR(100),
+	tip tinyint
 )
 
 CREATE TABLE REKLAME(
@@ -42,4 +43,9 @@ CREATE TABLE PARTNERI(
 	grupa int,
 	created_at timestamp,
 	updated_at timestamp    
+)
+
+create table logo(
+    id int auto_increment primary key,
+    link varchar(100)
 )

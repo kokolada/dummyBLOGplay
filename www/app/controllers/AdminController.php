@@ -8,23 +8,23 @@ class AdminController extends BaseController {
 	}
 
 	public function Vijesti(){
-
-		return View::make('dash.vijesti');
+		$vijesti = Vijest::all();
+		return View::make('dash.vijesti', compact('vijesti'));
 	}
 
 	public function Logo(){
-
-		return View::make('dash.logo');
+		$logo = DB::table('logo')->orderBy('id', 'desc')->pluck('link');
+		return View::make('dash.logo', compact('logo'));
 	}
 
 	public function BanerVeliki(){
-
-		return View::make('dash.velikibaner');
+		$baner = DB::table('baneri')->where('tip', 1)->orderBy('id', 'desc')->pluck('slika');
+		return View::make('dash.velikibaner', compact('baner'));
 	}
 
 	public function BanerMali(){
-
-		return View::make('dash.malibaner');
+		$baner = DB::table('baneri')->where('tip', 2)->orderBy('id', 'desc')->pluck('slika');
+		return View::make('dash.malibaner', compact('baner'));
 	}
 
 	public function Reklame(){
@@ -40,6 +40,8 @@ class AdminController extends BaseController {
 
 
 	public function Login(){
+		if(Auth::check())
+			return Redirect::route('dashboard');
 
 		return View::make('login');
 	}

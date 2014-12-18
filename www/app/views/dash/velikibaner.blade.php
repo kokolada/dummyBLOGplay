@@ -3,6 +3,7 @@
 @section('content')
 @include('layout.dashbar')
 
-veliki baner
+<p>{{$baner}}</p>
+<input type="file">
 
 @stop
