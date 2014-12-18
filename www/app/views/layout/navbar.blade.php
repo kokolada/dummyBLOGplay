@@ -1,5 +1,5 @@
 <img src="" alt="slika">
-<h1>CDOM</h1>
+<h1><a href="{{route('home')}}">CDOM</a></h1>
 <ul>
 	<li>O CDOM CARD</li>
 	<li><a href="{{route('clanstvo')}}">UČLANI SE</a></li>

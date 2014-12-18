@@ -40,4 +40,39 @@ Route::group(array('before' => 'auth'), function()
     	'as' => 'logout',
     	'uses' => 'AdminController@Logout'
     ));
+    //========================================================//
+    /*** OVDE POCINJU    RUTE ZA SIDEBAR LINKOVE(DASHBOARD) ***/
+
+    Route::get('/dashboard/vijesti', array(
+    	'as' => 'vijestidash',
+    	'uses' => 'AdminController@Vijesti'
+    ));
+
+    Route::get('/dashboard/logo', array(
+    	'as' => 'logodash',
+    	'uses' => 'AdminController@Logo'
+    ));
+
+    Route::get('/dashboard/baner-veliki', array(
+    	'as' => 'banervelikidash',
+    	'uses' => 'AdminController@BanerVeliki'
+    ));
+
+    Route::get('/dashboard/baner-mali', array(
+    	'as' => 'banermalidash',
+    	'uses' => 'AdminController@BanerMali'
+    ));
+
+    Route::get('/dashboard/reklame', array(
+    	'as' => 'reklamedash',
+    	'uses' => 'AdminController@Reklame'
+    ));
+
+    Route::get('/dashboard/partneri', array(
+    	'as' => 'partneridash',
+    	'uses' => 'AdminController@Partneri'
+    ));
+
+    /*** OVDE ZAVRSAVAJU RUTE ZA SIDEBAR LINKOVE(DASHBOARD) ***/
+    //========================================================//
 });
