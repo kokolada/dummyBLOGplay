@@ -7,6 +7,18 @@ class AdminController extends BaseController {
 		return View::make('dashboard');
 	}
 
+	public function DashboardPOST(){
+		$url = Image::upload($_FILES['slika']);
+		Vijest::create(array(
+			'naslov' => Input::get('naslov'),
+			'sadrzaj' => Input::get('textarea'),
+			'slika' => $url,
+			'korisnik_id' => Auth::user()->id
+		));
+
+		return View::make('dashboard');
+	}
+
 	public function Vijesti(){
 		$vijesti = Vijest::all();
 		return View::make('dash.vijesti', compact('vijesti'));

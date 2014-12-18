@@ -7,12 +7,17 @@
 
 {{Form::open(array('files' => true))}}
 
-	Naslov: <input type="text" placeholder="naslov" name="naslov"> <br>
-	Text: <textarea name="textarea" placeholder="sadrzaj" cols="30" rows="10"></textarea> <br>
-	Slika: <input type="file" name="slika"> <br>
-	<input type="submit" value="Dodaj vijest"> <br>
+	{{Form::label('naslov', 'Naslov: ')}}
+	{{Form::text('naslov', null, ['placeholder' => 'naslov'])}} <br>
+	{{Form::label('textarea', 'Sadrzaj: ')}}
+	{{Form::textarea('textarea', null, ['placeholder' => 'sadrzaj'])}} <br>
+	{{Form::label('slika', 'Slika: ')}}
+	{{Form::file('slika')}} <br>
+	{{Form::submit('Dodaj vijest')}} <br>
 
 {{Form::close()}}
+
+<!-- $("textarea").jqte(); -->
 
 </section>
 @stop

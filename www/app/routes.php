@@ -36,12 +36,10 @@ Route::group(array('before' => 'auth'), function()
     	'uses' => 'AdminController@Dashboard'
     ));
 
-    Route::get('/logout', array(
-    	'as' => 'logout',
-    	'uses' => 'AdminController@Logout'
+    Route::post('/dashboard', array(
+        'as' => 'dashboardPOST',
+        'uses' => 'AdminController@DashboardPOST'
     ));
-    //========================================================//
-    /*** OVDE POCINJU    RUTE ZA SIDEBAR LINKOVE(DASHBOARD) ***/
 
     Route::get('/dashboard/vijesti', array(
     	'as' => 'vijestidash',
@@ -75,4 +73,8 @@ Route::group(array('before' => 'auth'), function()
 
     /*** OVDE ZAVRSAVAJU RUTE ZA SIDEBAR LINKOVE(DASHBOARD) ***/
     //========================================================//
+    Route::get('/logout', array(
+        'as' => 'logout',
+        'uses' => 'AdminController@Logout'
+    ));
 });
