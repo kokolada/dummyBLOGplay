@@ -66,9 +66,27 @@ Route::group(array('before' => 'auth'), function()
     	'uses' => 'AdminController@Reklame'
     ));
 
+    Route::post('/dashboard/reklame', array(
+        'uses' => 'AdminController@ReklamePOST'
+    ));
+
+    Route::get('/dashboard/reklame/{id}', array(
+        'as' => 'reklamedashObrisi',
+        'uses' => 'AdminController@ReklameObrisi'
+    ));
+
     Route::get('/dashboard/partneri', array(
     	'as' => 'partneridash',
     	'uses' => 'AdminController@Partneri'
+    ));
+
+    Route::post('/dashboard/partneri', array(
+        'uses' => 'AdminController@PartneriPOST'
+    ));
+
+    Route::get('/dashboard/partneri/{id}', array(
+        'as' => 'partneridashObrisi',
+        'uses' => 'AdminController@PartneriObrisi'
     ));
 
     /*** OVDE ZAVRSAVAJU RUTE ZA SIDEBAR LINKOVE(DASHBOARD) ***/

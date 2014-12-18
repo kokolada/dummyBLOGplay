@@ -40,13 +40,58 @@ class AdminController extends BaseController {
 	}
 
 	public function Reklame(){
+		$reklame1 = DB::table('reklame')->where('broj', 1)->get();
+		$reklame2 = DB::table('reklame')->where('broj', 2)->get();
+		$reklame3 = DB::table('reklame')->where('broj', 3)->get();
+		$reklame = array('reklame1' => $reklame1, 'reklame2' => $reklame2, 'reklame3' => $reklame3);
 
-		return View::make('dash.reklame');
+		return View::make('dash.reklame', compact('reklame'));
+	}
+
+	public function ReklamePOST(){
+		$url = Image::upload($_FILES['slika']);
+		DB::table('reklame')->insert(array('broj' => Input::get('kategorija'), 'slika' => $url));
+
+		return $this->Reklame();
+	}
+
+	public function ReklameObrisi($id){
+		DB::table('reklame')->where('id', $id)->delete();
+		return Redirect::route('reklamedash');
 	}
 
 	public function Partneri(){
+		$gold = DB::table('partneri')->where('grupa', 1)->get();
+		$maxi = DB::table('partneri')->where('grupa', 2)->get();
+		$midi = DB::table('partneri')->where('grupa', 3)->get();
+		$mini = DB::table('partneri')->where('grupa', 4)->get();
+		$partneri = array(
+			'gold' => $gold,
+			'maxi' => $maxi,
+			'midi' => $midi,
+			'mini' => $mini
+		);
 
-		return View::make('dash.partneri');
+		return View::make('dash.partneri', compact('partneri'));
+	}
+
+	public function PartneriPOST(){
+		$url = Image::upload($_FILES['slika']);
+		DB::table('partneri')->insert(array(
+			'naziv' => Input::get('naziv'),
+			'sajt' => Input::get('sajt'),
+			'slika' => $url,
+			'opartneru' => Input::get('opartneru'),
+			'grupa' => Input::get('kategorija')
+		));	
+
+		return $this->Partneri();
+	}
+
+	public function PartneriObrisi($id){
+		DB::table('partneri')->where('id', $id)->delete();
+
+		return Redirect::route('partneridash');
 	}
 
 
