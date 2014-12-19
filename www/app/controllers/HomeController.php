@@ -7,6 +7,10 @@ class HomeController extends BaseController {
 		return View::make('home');
 	}
 
+	public function Vijest($id){
+		$vijest = Vijest::find($id);
+		return View::make('vijest', compact('vijest'));
+	}
 
 	public function Partneri(){
 

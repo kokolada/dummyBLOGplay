@@ -5,6 +5,11 @@ Route::get('/',array(
 	'uses' => 'HomeController@Home'
 ));
 
+Route::get('/vijest/{id}',array(
+    'as' => 'vijest',
+    'uses' => 'HomeController@Vijest'
+));
+
 Route::get('/partneri', array(
 	'as' => 'partneri',
 	'uses' => 'HomeController@Partneri'

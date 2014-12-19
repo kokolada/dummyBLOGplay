@@ -8,7 +8,8 @@ class AdminController extends BaseController {
 	}
 
 	public function DashboardPOST(){
-		$url = Image::upload($_FILES['slika']);
+		Input::file('slika')!=null ? $url = Image::upload($_FILES['slika']) : $url = null;
+		
 		Vijest::create(array(
 			'naslov' => Input::get('naslov'),
 			'sadrzaj' => Input::get('textarea'),
