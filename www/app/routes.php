@@ -88,6 +88,15 @@ Route::group(array('before' => 'auth'), function()
         'uses' => 'AdminController@LogoPOST'
     ));
 
+    Route::get('/dashboard/o-cdom-card', array(
+        'as' => 'ocdomdash',
+        'uses' => 'AdminController@OCdomCard'
+    ));
+
+    Route::post('/dashboard/o-cdom-card', array(
+        'uses' => 'AdminController@OCdomCardPOST'
+    ));
+
     Route::get('/dashboard/baner-veliki', array(
     	'as' => 'banervelikidash',
     	'uses' => 'AdminController@BanerVeliki'

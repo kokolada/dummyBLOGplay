@@ -63,6 +63,17 @@ class AdminController extends BaseController {
 		return $this->Logo();
 	}
 
+	public function oCdomCard(){
+		$ocdomcard = DB::table('ocdomcard')->orderBy('id', 'desc')->first();
+		return View::make('dash.ocdomcard', compact('ocdomcard'));
+	}
+
+	public function oCdomCardPOST(){
+		$url = Image::upload($_FILES['slika']);
+		DB::table('ocdomcard')->insert(array('opis' => Input::get('ocdom'), 'slika' => $url));
+		return $this->oCdomCard();
+	}
+
 	public function BanerVeliki(){
 		$baner = DB::table('baneri')->where('tip', 1)->orderBy('id', 'desc')->pluck('slika');
 		return View::make('dash.velikibaner', compact('baner'));
