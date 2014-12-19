@@ -22,4 +22,14 @@ class HomeController extends BaseController {
 
 		return View::make('clanstvo');
 	}
+
+	public function OnlineClanstvo(){
+
+		return View::make('OnlineClanstvo');
+	}
+
+	public function oCdom(){
+
+		return View::make('oCdom');
+	}
 }

@@ -20,6 +20,19 @@ Route::get('/uclani-se', array(
 	'uses' => 'HomeController@Clanstvo'
 ));
 
+/*HARUN KELJAO, ISPRAVI*/
+Route::get('/onlineClanstvo', array(
+    'as' => 'onlineclanstvo',
+    'uses' => 'HomeController@OnlineClanstvo'
+));
+
+Route::get('/oCdom', array(
+    'as' => 'oCdom',
+    'uses' => 'HomeController@oCdom'
+));
+
+/*DOVDJE SAM KELJAO*/
+
 Route::get('/cdom', array(
 	'as' => 'login',
 	'uses' => 'AdminController@Login'
