@@ -24,6 +24,32 @@ class AdminController extends BaseController {
 		return View::make('dash.vijesti', compact('vijesti'));
 	}
 
+	public function VijestiObrisi($id){
+		Vijest::destroy($id);
+		return Redirect::route('vijestidash');
+	}
+
+	public function VijestiEdit($id){
+		$vijest = Vijest::find($id);
+		return View::make('dash.vijestiEdit', compact('vijest'));
+	}
+
+	public function VijestiEditPOST($id){
+		$vijest = Vijest::find($id);	
+
+		if(Input::file('slika')!=null){
+			$url = Image::upload($_FILES['slika']);
+			$vijest->slika = $url;
+		}
+		
+		$vijest->naslov = Input::get('naslov');
+		$vijest->sadrzaj = Input::get('sadrzaj');
+
+		$vijest->save();
+
+		return Redirect::route('vijestidash');
+	}
+
 	public function Logo(){
 		$logo = DB::table('logo')->orderBy('id', 'desc')->pluck('link');
 		return View::make('dash.logo', compact('logo'));

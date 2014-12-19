@@ -26,8 +26,8 @@ Route::get('/onlineClanstvo', array(
     'uses' => 'HomeController@OnlineClanstvo'
 ));
 
-Route::get('/oCdom', array(
-    'as' => 'oCdom',
+Route::get('/o-cdom', array(
+    'as' => 'o-cdom',
     'uses' => 'HomeController@oCdom'
 ));
 
@@ -57,6 +57,21 @@ Route::group(array('before' => 'auth'), function()
     Route::get('/dashboard/vijesti', array(
     	'as' => 'vijestidash',
     	'uses' => 'AdminController@Vijesti'
+    ));
+
+    Route::get('/dashboard/vijesti/{id}', array(
+        'as' => 'vijestidashObrisi',
+        'uses' => 'AdminController@VijestiObrisi'
+    ));
+
+    Route::get('/dashboard/vijesti/{id}/edit', array(
+        'as' => 'vijestidashEdit',
+        'uses' => 'AdminController@VijestiEdit'
+    ));
+
+    Route::post('/dashboard/vijesti/{id}/edit', array(
+        'as' => 'vijestidashEditPOST',
+        'uses' => 'AdminController@VijestiEditPOST'
     ));
 
     Route::get('/dashboard/logo', array(

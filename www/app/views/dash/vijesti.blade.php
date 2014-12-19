@@ -5,10 +5,10 @@
 
 @foreach($vijesti as $v)
 	<h3>{{$v->naslov}}</h3>
-	<img src="{{$v->slika}}" alt="">
+	<img src="{{$v->slika}}">
 	<p>{{$v->sadrzaj}}</p>
-	<button>obrisi</button>
-	<button>uredi</button>
+	<a href="{{route('vijestidashObrisi', $v->id)}}">obrisi</a>
+	<a href="{{route('vijestidashEdit', $v->id)}}">uredi</a>
 @endforeach
 
 @stop

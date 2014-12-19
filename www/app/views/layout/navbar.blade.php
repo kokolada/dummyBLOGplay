@@ -9,15 +9,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{route('dashboard')}}">
                     <img src="/img/logo.png" alt="">
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav pull-right">
-                    <li class="active"><a href="#">POČETNA</a></li>
-                    <li><a href="#">O CDOM CARD</a></li>
+                    <li class="active"><a href="{{route('home')}}">POČETNA</a></li>
+                    <li><a href="{{route('o-cdom')}}">O CDOM CARD</a></li>
 					<li><a href="{{route('clanstvo')}}">UČLANI SE</a></li>
 					<li><a href="{{route('partneri')}}">PARTNERI</a></li>
 					<li><a href="#">CDOM</a></li>
