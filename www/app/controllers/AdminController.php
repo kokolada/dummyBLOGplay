@@ -51,8 +51,15 @@ class AdminController extends BaseController {
 	}
 
 	public function Logo(){
-		$logo = DB::table('logo')->orderBy('id', 'desc')->pluck('link');
+		$logo = DB::table('logo')->orderBy('id', 'desc')->first();
 		return View::make('dash.logo', compact('logo'));
+	}
+
+	public function LogoPOST(){
+		$url = Image::upload($_FILES['slika']);
+		DB::table('logo')->insert(array('link' => $url));
+
+		return $this->Logo();
 	}
 
 	public function BanerVeliki(){
@@ -60,9 +67,23 @@ class AdminController extends BaseController {
 		return View::make('dash.velikibaner', compact('baner'));
 	}
 
+	public function BanerVelikiPOST(){
+		$url = Image::upload($_FILES['slika']);
+		DB::table('baneri')->insert(array('tip' => 1, 'slika' => $url));
+
+		return $this->BanerVeliki();
+	}
+
 	public function BanerMali(){
 		$baner = DB::table('baneri')->where('tip', 2)->orderBy('id', 'desc')->pluck('slika');
 		return View::make('dash.malibaner', compact('baner'));
+	}
+
+	public function BanerMaliPOST(){
+		$url = Image::upload($_FILES['slika']);
+		DB::table('baneri')->insert(array('tip' => 2, 'slika' => $url));
+
+		return $this->BanerMali();
 	}
 
 	public function Reklame(){

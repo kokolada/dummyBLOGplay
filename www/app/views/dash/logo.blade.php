@@ -3,7 +3,13 @@
 @section('content')
 @include('layout.dashbar')
 
-<p>{{$logo}}</p>
-<input type="file">
+<img src="{{$logo->link}}">
+
+{{Form::open(array('files' => true))}}
+
+{{Form::file('slika')}}
+{{Form::submit('sacuvaj')}}
+
+{{Form::close()}}
 
 @stop

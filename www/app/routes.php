@@ -79,14 +79,26 @@ Route::group(array('before' => 'auth'), function()
     	'uses' => 'AdminController@Logo'
     ));
 
+    Route::post('/dashboard/logo', array(
+        'uses' => 'AdminController@LogoPOST'
+    ));
+
     Route::get('/dashboard/baner-veliki', array(
     	'as' => 'banervelikidash',
     	'uses' => 'AdminController@BanerVeliki'
     ));
 
+    Route::post('/dashboard/baner-veliki', array(
+        'uses' => 'AdminController@BanerVelikiPOST'
+    ));
+
     Route::get('/dashboard/baner-mali', array(
     	'as' => 'banermalidash',
     	'uses' => 'AdminController@BanerMali'
+    ));
+
+    Route::post('/dashboard/baner-mali', array(
+        'uses' => 'AdminController@BanerMaliPOST'
     ));
 
     Route::get('/dashboard/reklame', array(
