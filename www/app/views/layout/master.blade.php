@@ -6,6 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/Bootstrap/css/custom.css">
+
+	<link href="/Bootstrap/css/sb-admin.css" rel="stylesheet">
+	<link href="/Bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
