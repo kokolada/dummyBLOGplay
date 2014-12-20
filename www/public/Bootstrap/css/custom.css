@@ -45,6 +45,10 @@ a:hover {
 	color: #66C3FF;
 }
 
+.navbar li a:hover {
+	background-color: white;
+}
+
 .navbar-collapse {
 	margin-top: 100px;
 }
@@ -146,6 +150,39 @@ a:hover {
 	border-radius: 4px;
 	padding-bottom: 20px;
 }
+
+/* DASHBOARD*/
+#izmjenaLoga {
+	margin: 5% 5% 0 5%;
+}
+
+#dash {
+	border: 1px solid #66C3FF;
+	border-radius: 4px;
+	padding: 20px 15px 20px 15px;
+}
+
+/*login*/
+
+#login {
+	margin-top: 100px;
+	margin-left: 350px;
+	border: 2px solid #66C3FF;
+	border-radius: 4px;
+	padding-bottom: 20px;
+	color: white;
+	font-size: 16px;
+	background-color: #3C3D34;
+}
+
+#logCont {
+	background-color: #272822;
+}
+
+
+
+
+
 
 /*FOOTER (#footer, #wrap)*/
 #footer {
