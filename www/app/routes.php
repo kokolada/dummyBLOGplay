@@ -25,6 +25,11 @@ Route::get('/uclani-se', array(
 	'uses' => 'HomeController@Clanstvo'
 ));
 
+Route::get('/kontakt', array(
+    'as' => 'kontakt',
+    'uses' => 'HomeController@Kontakt'
+));
+
 /*HARUN KELJAO, ISPRAVI*/
 Route::get('/onlineClanstvo', array(
     'as' => 'onlineclanstvo',
@@ -150,6 +155,15 @@ Route::group(array('before' => 'auth'), function()
 
     Route::post('/dashboard/password', array(
         'uses' => 'AdminController@PasswordPOST'
+    ));
+
+    Route::get('/dashboard/kontakt', array(
+        'as' => 'kontaktdash',
+        'uses' => 'AdminController@Kontakt'
+    ));
+
+    Route::post('/dashboard/kontakt', array(
+        'uses' => 'AdminController@KontaktPOST'
     ));
 
     /*** OVDE ZAVRSAVAJU RUTE ZA SIDEBAR LINKOVE(DASHBOARD) ***/

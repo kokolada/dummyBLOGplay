@@ -45,9 +45,9 @@
 
 		@foreach($home['vijesti'] as $v)
 			<div class="vijesti razmakVijesti">
-				<a href="#"><img class="slikaVijesti" src="{{$v->slika}}"></a>
+				<a href="{{route('vijest', $v->id)}}"><img class="slikaVijesti" src="{{$v->slika}}"></a>
 				<div class="infoVijest">
-					<a href="#" alt=""><h3 id="naslovVijesti">{{$v->naslov}}</h3></a>
+					<a href="{{route('vijest', $v->id)}}" alt=""><h3 id="naslovVijesti">{{$v->naslov}}</h3></a>
 					<p>{{$v->sadrzaj}}</p>
 				</div>
 			</div>

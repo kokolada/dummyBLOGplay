@@ -7,12 +7,12 @@
 
 @if(isset($ocdomcard))
 	<img src="{{$ocdomcard->slika}}">
-	<p>{{$ocdomcard->opis}}</p>	
 @endif
 
 {{Form::file('slika')}}
-{{Form::textarea('ocdom',null,['placeholder' => 'o cdom card'])}} <br>
+{{Form::textarea('ocdom',$ocdomcard->opis,['placeholder' => 'o cdom card'])}} <br>
 {{Form::submit('sacuvaj')}}
+{{Form::hidden('stariurl', $ocdomcard->slika)}}
 
 {{Form::close()}}
 

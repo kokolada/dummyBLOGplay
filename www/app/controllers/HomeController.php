@@ -24,7 +24,22 @@ class HomeController extends BaseController {
 
 	public function Vijest($id){
 		$vijest = Vijest::find($id);
-		return View::make('vijest', compact('vijest'));
+		$banerv = DB::table('baneri')->where('tip', 1)->orderBy('id', 'desc')->pluck('slika');
+		$banerm = DB::table('baneri')->where('tip', 2)->orderBy('id', 'desc')->pluck('slika');
+		$logo = DB::table('logo')->orderBy('id', 'desc')->pluck('link');
+		$reklame1 = DB::table('reklame')->where('broj', 1)->get();
+		$reklame2 = DB::table('reklame')->where('broj', 2)->get();
+		$reklame3 = DB::table('reklame')->where('broj', 3)->get();
+		$reklame = array('reklame1' => $reklame1, 'reklame2' => $reklame2, 'reklame3' => $reklame3);
+		$vijesti = Vijest::all();
+		$home = array(
+			'banerv' => $banerv,
+			'banerm' => $banerm,
+			'logo' => $logo,
+			'reklame' => $reklame,
+			'vijesti' => $vijesti
+		);
+		return View::make('vijest', compact(['vijest', 'home']));
 	}
 
 	public function Partneri(){
@@ -59,5 +74,10 @@ class HomeController extends BaseController {
 	public function oCdom(){
 		$ocdom = DB::table('ocdomcard')->orderBy('id', 'desc')->first();
 		return View::make('oCdom', compact('ocdom'));
+	}
+
+	public function Kontakt(){
+		$kontakt = DB::table('kontakt')->where('id', 1)->first();
+		return View::make('kontakt', compact('kontakt'));
 	}
 }

@@ -42,7 +42,7 @@
 			<div class="vijesti razmakVijesti">
 				<h3 id="naslovVijesti">{{$vijest->naslov}}</h3>
 				<div class="col-md-12">
-					<a href="#"><img class="slikaVijesti" src="$vijest->slika"></a>
+					<a href="#"><img class="slikaVijesti" src="{{$vijest->slika}}"></a>
 				</div>
 				<div class="infoVijest">
 					<p align="justify">{{$vijest->sadrzaj}}</p>

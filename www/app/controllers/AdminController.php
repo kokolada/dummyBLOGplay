@@ -69,7 +69,12 @@ class AdminController extends BaseController {
 	}
 
 	public function oCdomCardPOST(){
-		$url = Image::upload($_FILES['slika']);
+		if(Input::file('slika')!=null){
+			$url = Image::upload($_FILES['slika']);
+		}
+		else{
+			$url = Input::get('stariurl');
+		}
 		DB::table('ocdomcard')->insert(array('opis' => Input::get('ocdom'), 'slika' => $url));
 		return $this->oCdomCard();
 	}
@@ -166,6 +171,29 @@ class AdminController extends BaseController {
 		}
 		
 		return $this->Password();
+	}
+
+	public function Kontakt(){
+		$kontakt = DB::table('kontakt')->first();
+		return View::make('dash.kontakt', compact('kontakt'));
+	}
+
+	public function KontaktPOST(){
+		if(Input::file('slika')!=null){
+			$url = Image::upload($_FILES['slika']);
+		}
+		else{
+			$url = Input::get('stariurl');
+		}
+
+		DB::table('kontakt')->where('id', 1)->update(array(
+			'slika' => $url,
+			'email' => Input::get('email'),
+			'telefon' => Input::get('telefon'),
+			'adresa' => Input::get('adresa')
+		));
+
+		return $this->Kontakt();
 	}
 
 	public function Login(){

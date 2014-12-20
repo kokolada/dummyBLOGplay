@@ -24,7 +24,7 @@ if(!Session::has('logo'))
 					<li><a href="{{route('clanstvo')}}">UČLANI SE</a></li>
 					<li><a href="{{route('partneri')}}">PARTNERI</a></li>
 					<li><a href="#">CDOM</a></li>
-					<li><a href="#">KONTAKT</a></li>
+					<li><a href="{{route('kontakt')}}">KONTAKT</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

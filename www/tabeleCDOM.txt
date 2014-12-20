@@ -55,3 +55,11 @@ create table ocdomcard(
     slika varchar(100),
     opis text
 )
+
+create table kontakt(
+	id int auto_increment primary key,
+	slika varchar(100),
+	email varchar(30),
+	telefon varchar(30),
+	adresa varchar(30)
+)
