@@ -28,8 +28,17 @@ class HomeController extends BaseController {
 	}
 
 	public function Partneri(){
-
-		return View::make('partneri');
+		$gold = DB::table('partneri')->where('grupa', 1)->get();
+		$maxi = DB::table('partneri')->where('grupa', 2)->get();
+		$midi = DB::table('partneri')->where('grupa', 3)->get();
+		$mini = DB::table('partneri')->where('grupa', 4)->get();
+		$partneri = array(
+			'gold' => $gold,
+			'maxi' => $maxi,
+			'midi' => $midi,
+			'mini' => $mini
+		);
+		return View::make('partneri', compact('partneri'));
 	}
 
 	public function Partner(){

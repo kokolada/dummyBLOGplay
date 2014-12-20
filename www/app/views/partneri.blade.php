@@ -6,41 +6,33 @@
 	<h2>Gold partneri</h2>
 	<hr>
 	<div class="row">
+	@foreach($partneri['gold'] as $g)
 	    @include('Home/goldPartnerThumb')
-	    @include('Home/goldPartnerThumb')
-	    @include('Home/goldPartnerThumb')
-	    @include('Home/goldPartnerThumb')	    	    
+	@endforeach   	    
 	</div>
 	<br>
 	<h2>Maxi partneri</h2>
 	<hr>
 	<div class="row">
-	    @include('Home/maxiPartnerThumb')	    	    
-	    @include('Home/maxiPartnerThumb')	    	    
-	    @include('Home/maxiPartnerThumb')	    	    
-	    @include('Home/maxiPartnerThumb') 	    
+	@foreach($partneri['maxi'] as $mx)
+	    @include('Home/maxiPartnerThumb')
+	@endforeach	    
 	</div>
 	<br>
 	<h2>Midi partneri</h2>
 	<hr>
 	<div class="row">
-	    @include('Home/midiPartnerThumb') 	    
-	    @include('Home/midiPartnerThumb') 	    
-	    @include('Home/midiPartnerThumb') 	    
-	    @include('Home/midiPartnerThumb')	    
+	@foreach($partneri['midi'] as $md)
+	    @include('Home/midiPartnerThumb')
+	@endforeach		    
 	</div>
 	<br>
 	<h2>Mini partneri</h2>
 	<hr>
 	<div class="row">
-	    @include('Home/miniPartnerThumb')	    
-	    @include('Home/miniPartnerThumb')	    
-	    @include('Home/miniPartnerThumb')	    
+	@foreach($partneri['mini'] as $mn)
 	    @include('Home/miniPartnerThumb')
-	    @include('Home/miniPartnerThumb')	    
-	    @include('Home/miniPartnerThumb')	    
-	    @include('Home/miniPartnerThumb')	    
-	    @include('Home/miniPartnerThumb')	    
+	@endforeach	    
 	</div>
 	@include('partner')
 </div>
