@@ -5,7 +5,10 @@
 <div class="container">
 	<div class="row razmak">
 		<div class="col-md-12">
-			<a href="#"><img class="img-responsive imageBanner" src="http://placehold.it/780x140/612b65/fff&amp;text=Partner+1"></a>
+			<a href="#">
+			<!-- <img class="img-responsive imageBanner" src="http://placehold.it/780x140/612b65/fff&amp;text=Partner+1"> -->
+			<img class="img-responsive imageBanner" src="{{$home['banerv']}}">
+			</a>
 		</div>
 	</div>
 
@@ -17,9 +20,9 @@
 		<div class="col-md-4">
 			<section name="3 reklame">
 			<ul class="reklame">
-				<li><a href="#"><img class="img-responsive reklame123" src="http://placehold.it/360x143/66C3FF/000&amp;text=Reklama+1"></a></li>
-				<li><a href="#"><img class="img-responsive reklame123" src="http://placehold.it/360x143/66C3FF/000&amp;text=Reklama+2"></a></li>
-				<li><a href="#"><img class="img-responsive reklame123" src="http://placehold.it/360x143/66C3FF/000&amp;text=Reklama+3"></a></li>
+				<li><a href="#"><img class="img-responsive reklame123" src="{{$home['reklame']['reklame1'][0]->slika}}"></a></li>
+				<li><a href="#"><img class="img-responsive reklame123" src="{{$home['reklame']['reklame2'][0]->slika}}"></a></li>
+				<li><a href="#"><img class="img-responsive reklame123" src="{{$home['reklame']['reklame3'][0]->slika}}"></a></li>
 			</ul>				 
 			</section>
 		</div>
@@ -28,7 +31,7 @@
 	<div class="row razmak">
 		<div class="col-md-8">
 			<section name="banner">
-				<a href="#"><img class="img-responsive imageBanner" src="http://placehold.it/780x140/e8117f/fff&amp;text=Partner+2"></a>
+				<a href="#"><img class="img-responsive imageBanner" src="{{$home['banerm']}}"></a>
 			</section>
 		</div>
 		<div class="col-md-4">
@@ -39,21 +42,17 @@
 
 	<div class="row razmak">
 		<div class="col-md-8">
-			<div class="vijesti razmakVijesti">
-				<a href="#"><img class="slikaVijesti" src="http://placehold.it/100x100/612b65/fff&amp;text=Vijest"></a>
-				<div class="infoVijest">
-					<a href="#" alt=""><h3 id="naslovVijesti">Naslov za prvu vijest</h3></a>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ullam tempora dignissimos deserunt blanditiis, corporis tempore harum eos officia error sed repellendus quod, dolor cumque doloremque velit. Minus quos quis incidunt, earum nobis impedit voluptates inventore consectetur voluptatem blanditiis, animi itaque nam nisi temporibus nostrum cupiditate cumque omnis ab hic.</p>
-				</div>
-			</div>
 
+		@foreach($home['vijesti'] as $v)
 			<div class="vijesti razmakVijesti">
-				<a href="#"><img class="slikaVijesti" src="http://placehold.it/100x100/612b65/fff&amp;text=Vijest"></a>
+				<a href="#"><img class="slikaVijesti" src="{{$v->slika}}"></a>
 				<div class="infoVijest">
-					<a href="#" alt=""><h3 id="naslovVijesti">Naslov za drugu vijest</h3></a>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ullam tempora dignissimos deserunt blanditiis, corporis tempore harum eos officia error sed repellendus quod, dolor cumque doloremque velit. Minus quos quis incidunt, earum nobis impedit voluptates inventore consectetur voluptatem blanditiis, animi itaque nam nisi temporibus nostrum cupiditate cumque omnis ab hic.</p>
+					<a href="#" alt=""><h3 id="naslovVijesti">{{$v->naslov}}</h3></a>
+					<p>{{$v->sadrzaj}}</p>
 				</div>
 			</div>
+		@endforeach
+			
 		</div>		
 
 		<div class="col-md-4">

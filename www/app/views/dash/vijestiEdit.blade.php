@@ -15,10 +15,10 @@
 	))}}
 
 		{{Form::label('naslov', 'Naslov:')}}
-		{{Form::text('naslov', ['class' => 'form-control'])}}
+		{{Form::text('naslov', null, ['class' => 'form-control'])}}
 		
 		{{Form::label('sadrzaj', 'Sadržaj:')}}
-		{{Form::textarea('sadrzaj',['class' => 'form-control'])}}
+		{{Form::textarea('sadrzaj', null, ['class' => 'form-control'])}}
 
 		{{Form::label('slika', 'Slika:')}}
 		{{Form::file('slika',['class' => 'btn btn-default btn-sm'])}}

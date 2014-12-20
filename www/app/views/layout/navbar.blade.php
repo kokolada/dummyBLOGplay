@@ -1,4 +1,7 @@
-
+<?php 
+if(!Session::has('logo'))
+    Session::put('logo', DB::table('logo')->orderBy('id', 'desc')->pluck('link')); 
+?>
 <nav class="navbar navbar-static-top" role="navigation" id="as">
         <div class="container">
 
@@ -10,7 +13,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="{{route('dashboard')}}">
-                    <img src="/img/logo.png" alt="">
+                    <img class="img-responsive" src="{{Session::get('logo')}}" alt="">
                 </a>
             </div>
 

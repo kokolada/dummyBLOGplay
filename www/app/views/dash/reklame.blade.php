@@ -3,6 +3,7 @@
 @section('content')
 @include('layout.dashbar')
 
+<div id="rekl">
 {{Form::open(array('files' => true))}}
 <h3>reklame pool 1</h3>
 @foreach($reklame['reklame1'] as $r1)
@@ -28,4 +29,5 @@
 {{Form::submit('dodaj novu')}}
 
 {{Form::close()}}
+</div>
 @stop
