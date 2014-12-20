@@ -1,19 +1,24 @@
-@extends('layout.master')
-
+@extends('layout.dMaster')
 @section('content')
-@include('layout.dashbar')
+@include('layout.dashbar')	
 
-{{Form::open(array('files' => true))}}
+<div class="container containerMargin">		
+	<div class="col-md-6 col-md-offset-1">		
 
-@if(isset($ocdomcard))
-	<img src="{{$ocdomcard->slika}}">
-@endif
+		<h2 class="page-header">Uredi informacije o CDOM Card</h2>
+			{{Form::open(array('files' => true))}}
 
-{{Form::file('slika')}}
-{{Form::textarea('ocdom',$ocdomcard->opis,['placeholder' => 'o cdom card'])}} <br>
-{{Form::submit('sacuvaj')}}
-{{Form::hidden('stariurl', $ocdomcard->slika)}}
+			@if(isset($ocdomcard))
+				<img src="{{$ocdomcard->slika}}" class="img-resposive  img-thumbnail slika">
+			@endif
 
-{{Form::close()}}
+			{{Form::file('slika',['class' => 'btn btn-default btn-sm'])}}
+			{{Form::textarea('ocdom',$ocdomcard->opis,['placeholder' => 'o cdom card'])}} <br>
+			<hr>
+			{{Form::submit('Sačuvaj',['class' => 'btn btn-primary pull-right'])}}
+			{{Form::hidden('stariurl', $ocdomcard->slika)}}
 
+			{{Form::close()}}
+	</div>
+</div>
 @stop

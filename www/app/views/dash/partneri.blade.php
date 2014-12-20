@@ -1,53 +1,90 @@
-@extends('layout.master')
-
+@extends('layout.dMaster')
 @section('content')
-@include('layout.dashbar')
+@include('layout.dashbar')	
 
-{{Form::open(array('files' => true))}}
+<div class="container containerMargin">		
+	<div class="col-md-9 col-md-offset-1">		
+	
+	<h2 class="page-header">Uredi partnere</h2>
 
-<h3>Gold partneri</h3>
-@foreach($partneri['gold'] as $g)
-	<h3>{{$g->naziv}}</h3>
-	<a href="{{$g->sajt}}">{{$g->sajt}}</a>
-	<img src="{{$g->slika}}">
-	<p>{{$g->opartneru}}</p>
-	<a href="{{route('partneridashObrisi', $g->id)}}">obrisi</a>
-@endforeach
+	<div class="panel panel-default">
+		<div class="panel-heading">
+		    <h3 class="panel-title">Uredi postojeće partnere</h3>
+		    <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+		</div>
+		<div class="panel-body">
+		{{Form::open(array('files' => true))}}
 
-<h3>Maxi partneri</h3>
-@foreach($partneri['maxi'] as $mx)
-	<h3>{{$mx->naziv}}</h3>
-	<a href="{{$mx->sajt}}">{{$mx->sajt}}</a>
-	<img src="{{$mx->slika}}">
-	<p>{{$mx->opartneru}}</p>
-	<a href="{{route('partneridashObrisi', $mx->id)}}">obrisi</a>
-@endforeach
+		<h4 align="center">Gold partneri</h4>
+		<hr>
+		<div class="row">
+			@foreach($partneri['gold'] as $g)
 
-<h3>Midi partneri</h3>
-@foreach($partneri['midi'] as $md)
-	<h3>{{$md->naziv}}</h3>
-	<a href="{{$md->sajt}}">{{$md->sajt}}</a>
-	<img src="{{$md->slika}}">
-	<p>{{$md->opartneru}}</p>
-	<a href="{{route('partneridashObrisi', $md->id)}}">obrisi</a>
-@endforeach
+				@include('Home/goldPartnerThumb')
+				<a class="btn btn-warning btn-xs" href="{{route('partneridashObrisi', $g->id)}}">Obriši</a>
+				
+			@endforeach
+		</div>
 
-<h3>Mini partneri</h3>
-@foreach($partneri['mini'] as $mn)
-	<h3>{{$mn->naziv}}</h3>	
-	<a href="{{$mn->sajt}}">{{$mn->sajt}}</a>
-	<img src="{{$mn->slika}}">
-	<p>{{$mn->opartneru}}</p>
-	<a href="{{route('partneridashObrisi', $mn->id)}}">obrisi</a>
-@endforeach
+		<h4 align="center">Maxi partneri</h4>
+		<hr>
+		<div class="row">
+			@foreach($partneri['maxi'] as $mx)				
+				@include('Home/maxiPartnerThumb')	
+				<a class="btn btn-warning btn-xs" href="{{route('partneridashObrisi', $mx->id)}}">Obriši</a>				
+			@endforeach
+		</div>
 
-{{Form::text('naziv', null, ['placeholder' => 'naziv'])}} <br>
-{{Form::text('sajt', null, ['placeholder' => 'web stranica'])}} <br>
-{{Form::file('slika')}} <br>
-{{Form::textarea('opartneru')}} <br>
-{{Form::select('kategorija', array('1' => 'gold', '2' => 'maxi', '3' => 'midi', '4' => 'mini'))}}<br>
-{{Form::submit('dodaj novog')}}
+		<h4 align="center">Midi partneri</h4>
+		<hr>
+		<div class="row">
+			@foreach($partneri['midi'] as $md)
 
-{{Form::close()}}
+				@include('Home/midiPartnerThumb')
+				<a class="btn btn-warning btn-xs" href="{{route('partneridashObrisi', $md->id)}}">Obriši</a>
+				
+			@endforeach
+		</div>
+
+		<h4 align="center">Mini partneri</h4>
+		<hr>
+		<div class="row">
+			@foreach($partneri['mini'] as $mn)
+				@include('Home/miniPartnerThumb')
+				<a class="btn btn-warning btn-xs" href="{{route('partneridashObrisi', $mn->id)}}">Obriši</a>
+			@endforeach
+		</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+		    <h3 class="panel-title">Dodaj novog partnera</h3>
+		    <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+		</div>
+		<div class="panel-body">
+			{{Form::label('naziv', 'Naziv:')}}
+			{{Form::text('naziv', null, ['placeholder' => 'naziv','class' => 'form-control'])}} <br>
+
+			{{Form::label('sajt', 'Web stranica:')}}			
+			{{Form::text('sajt', null, ['placeholder' => 'web stranica','class' => 'form-control'])}} <br>
+			
+			{{Form::label('slika', 'Slika:')}}	
+			{{Form::file('slika', ['class' => 'btn btn-default btn-sm'])}} <br>
+			
+			{{Form::label('opartneru', 'Opartneru:')}}
+			{{Form::textarea('opartneru')}} <br>
+			<div class="col-md-6" id="#noPadd">
+			{{Form::label('kategorija', 'Kategorija:')}}
+			{{Form::select('kategorija', array('1' => 'gold', '2' => 'maxi', '3' => 'midi', '4' => 'mini'),null, array('class' => 'form-control'))}}<br>
+			</div><br>
+			<div class="col-md-12"><hr></div>
+			{{Form::submit('Dodaj partnera',['class' => 'btn btn-primary pull-right'])}}
+
+			{{Form::close()}}
+		</div>
+	</div>
+
+</div>
 
 @stop

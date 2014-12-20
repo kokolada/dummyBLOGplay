@@ -1,4 +1,32 @@
+
+// $("li").click(function(){
+//   // If this isn't already active
+//   if (!$(this).hasClass("active")) {
+//     // Remove the class from anything that is active
+//     $("li.active").removeClass("active");
+//     // And make this active
+//     $(this).addClass("active");
+//   }
+// });
+
 /* copy loaded thumbnails into carousel */
+jQuery(function ($) {
+        $('.panel-heading span.clickable').on("click", function (e) {
+            if ($(this).hasClass('panel-collapsed')) {
+                // expand the panel
+                $(this).parents('.panel').find('.panel-body').slideDown();
+                $(this).removeClass('panel-collapsed');
+                $(this).find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+            }
+            else {
+                // collapse the panel
+                $(this).parents('.panel').find('.panel-body').slideUp();
+                $(this).addClass('panel-collapsed');
+                $(this).find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+            }
+        });
+    });
+    
 $('.row .thumbnail').on('load', function() {
   
 }).each(function(i) {

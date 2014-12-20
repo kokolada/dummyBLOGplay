@@ -2,7 +2,7 @@
 if(!Session::has('logo'))
     Session::put('logo', DB::table('logo')->orderBy('id', 'desc')->pluck('link')); 
 ?>
-<nav class="navbar navbar-static-top" role="navigation" id="as">
+<nav class="navbar navbar-static-top" role="navigation" id="navbarMaster">
         <div class="container">
 
             <div class="navbar-header">

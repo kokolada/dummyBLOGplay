@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>CDOM Card</title>
 	<link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/Bootstrap/css/custom.css">

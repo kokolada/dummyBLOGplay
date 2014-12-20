@@ -1,32 +1,73 @@
-@extends('layout.master')
-
+@extends('layout.dMaster')
 @section('content')
-@include('layout.dashbar')
+@include('layout.dashbar')	
 
-{{Form::open(array('files' => true))}}
-<h3>reklame pool 1</h3>
-@foreach($reklame['reklame1'] as $r1)
-	<img src="{{$r1->slika}}">
-	<a href="{{route('reklamedashObrisi', $r1->id)}}">obrisi</a>
-@endforeach
+<div class="container containerMargin">		
+	<div class="col-md-9 col-md-offset-1">		
+	
+	<h2 class="page-header">Uredi reklame</h2>	
 
-<h3>reklame pool 2</h3>
-@foreach($reklame['reklame2'] as $r2)
-	<img src="{{$r2->slika}}">
-	<a href="{{route('reklamedashObrisi', $r2->id)}}">obrisi</a>
-@endforeach
+		{{Form::open(array('files' => true))}}
 
-<h3>reklame pool 3</h3>
-@foreach($reklame['reklame3'] as $r3)
-	<img src="{{$r3->slika}}">
-	<a href="{{route('reklamedashObrisi', $r3->id)}}">obrisi</a>
-@endforeach
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			    <h3 class="panel-title">Uredi postojeće reklame</h3>
+			    <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+			</div>
+			<div class="panel-body">
+				<h4 align="center">Reklame pool 1</h4>
+				<hr>
+				<div class="row">
+				@foreach($reklame['reklame1'] as $r1)
+					<div class="col-md-3">
+						<img class="img-responsive imageBanner" src="{{$r1->slika}}">
+						<center><a class="btn btn-warning btn-xs odmakni" href="{{route('reklamedashObrisi', $r1->id)}}">Obriši</a></center>
+					</div>
+				@endforeach
+				</div>
 
-<br>
-{{Form::file('slika')}} <br>
-{{Form::select('kategorija', array('1' => 'pool1', '2' => 'pool2', '3' => 'pool3'))}} <br>
-{{Form::submit('dodaj novu')}}
+				<h4 align="center">Reklame pool 2</h4>
+				<hr>
+				<div class="row">
+				@foreach($reklame['reklame2'] as $r2)
+					<div class="col-md-3">
+						<img class="img-responsive imageBanner" src="{{$r1->slika}}">
+						<center><a class="btn btn-warning btn-xs odmakni" href="{{route('reklamedashObrisi', $r1->id)}}">Obriši</a></center>
+					</div>
+				@endforeach
+				</div>
 
-{{Form::close()}}
+				<h4 align="center">Reklame pool 3</h4>
+				<hr>
+				<div class="row">
+				@foreach($reklame['reklame3'] as $r3)
+					<div class="col-md-3">
+						<img class="img-responsive imageBanner" src="{{$r1->slika}}">
+						<center><a class="btn btn-warning btn-xs odmakni" href="{{route('reklamedashObrisi', $r1->id)}}">Obriši</a></center>
+					</div>
+				@endforeach
+				</div>
+			</div>
+		</div>
 
+		<br>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			    <h3 class="panel-title">Dodaj novu reklamu</h3>
+			    <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+			</div>
+			<div class="panel-body">
+				{{Form::label('slika', 'Slika:')}}
+				{{Form::file('slika',['class' => 'btn btn-default btn-sm'])}} <br>
+				<div class="col-md-6" id="noPadd">
+					{{Form::label('kategorija', 'Kategorija:')}}		
+					{{Form::select('kategorija', array('1' => 'pool1', '2' => 'pool2', '3' => 'pool3'),null, array('class' => 'form-control'))}} <br>
+				</div>
+				<div class="col-md-12"><hr></div>
+				{{Form::submit('Dodaj reklamu',['class' => 'btn btn-primary pull-right'])}}
+			</div>
+		</div>
+		{{Form::close()}}
+</div>
+</div>
 @stop

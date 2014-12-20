@@ -23,11 +23,16 @@ a:hover {
 	text-decoration: none;
 }
 
+#dashMainNav {
+	margin: 0;
+	border: 0;
+}
+
 .navbar-brand { 
 	margin-bottom: 20px;
 }
 
-.navbar{
+#navbarMaster{
 	height: 150px;
 	background-color: #66C3FF;
 }
@@ -112,6 +117,7 @@ a:hover {
 }
 
 #ImeKompanije {
+	text-align: center;
 	color: white;
 	font-size: 1.2em;
 }
@@ -145,7 +151,7 @@ a:hover {
 	border-right: 1px solid #585A4E;
 }
 
-#clanstvo{
+#clanstvo {
 	border: 1px solid #66C3FF;
 	border-radius: 4px;
 	padding-bottom: 20px;
@@ -161,6 +167,41 @@ a:hover {
 	border-radius: 4px;
 	padding: 20px 15px 20px 15px;
 }
+
+.containerMargin {
+	margin-top: 20px;
+}
+
+#dashMainNav>ul>li>a {
+	font-size: 14px;
+}
+
+#listaNavDash{
+	margin: 4px;
+}
+
+#listaNavDash>li{
+	margin: 2px;
+	text-align: center;
+}
+
+#naslovDash {
+	color: white;
+	margin: 12px;
+}
+
+.slika{
+	margin-bottom: 10px;
+}
+
+#noPadd {
+	padding: 0;
+}
+
+.odmakni{
+	margin: 3px;
+}
+
 
 /*login*/
 
@@ -212,3 +253,15 @@ a:hover {
   margin-top:10%;
   width:5%;
 }
+
+.panel-heading span {
+    margin-top: -20px;
+    font-size: 15px;
+}
+.row {
+    margin-top: 40px;
+    padding: 0 10px;
+}
+.clickable {
+    cursor: pointer;
+}  

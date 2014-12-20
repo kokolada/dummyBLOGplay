@@ -3,11 +3,9 @@
 /* Side Navigation */
 @media(min-width:768px) {
     .side-nav {
-        position: fixed;
-        top: 150px;
-        left: 225px;
+        float: left;
+        position: static;
         width: 225px;
-        margin-left: -225px;
         border: none;
         border-radius: 0;
         overflow-y: auto;
@@ -19,7 +17,10 @@
     }
 
     .side-nav li a:hover,
-    .side-nav li a:focus {
+    .side-nav li a:focus,
+     #dashMainNav>ul>li>a:hover,
+     #dashMainNav>ul>li>a:focus,
+    {
         outline: none;
         background-color: #000 !important;
     }
@@ -29,13 +30,13 @@
     padding: 0;
 }
 
-.side-nav>li>ul>li>a {
+.side-nav>li>ul>li>a, #dashMainNav>ul>li>a {
     display: block;
     padding: 10px 15px 10px 38px;
     text-decoration: none;
     color: #999;
 }
 
-.side-nav>li>ul>li>a:hover {
+.side-nav>li>ul>li>a:hover, #dashMainNav>ul>li>a:hover {
     color: #fff;
 }

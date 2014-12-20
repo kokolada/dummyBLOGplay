@@ -1,21 +1,18 @@
-@extends('layout.master')
-
+@extends('layout.dMaster')
 @section('content')
+@include('layout.dashbar')	
 
-
-<div class="container">	
-
-	@include('layout.dashbar')	
+<div class="container containerMargin">		
+	<div class="col-md-6 col-md-offset-1">		
 	
-	<div class="col-md-6 col-md-offset-3" id="dash">
-		
+	<h2 class="page-header">Promijeni password</h2>		
 
 		{{Form::open()}}
 			<div id="izmjenaLoga">
 				{{Form::label('trenutniPW', 'Stari password: ')}}
-				{{Form::text('trenutniPW')}} <br>
+				{{Form::text('trenutniPW', null, ['class' => 'form-control'])}} <br>
 				{{Form::label('noviPW', 'Novi password: ')}}
-				{{Form::text('noviPW')}}
+				{{Form::text('noviPW', null, ['class' => 'form-control'])}}
 				<hr>
 				{{Form::submit('Sačuvaj', ['class' => 'btn btn-primary pull-right'])}}
 			</div>

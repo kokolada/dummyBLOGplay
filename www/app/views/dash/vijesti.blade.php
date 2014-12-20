@@ -1,13 +1,12 @@
-@extends('layout.master')
-
+@extends('layout.dMaster')
 @section('content')
+@include('layout.dashbar')	
 
-
-<div class="container">	
-
-	@include('layout.dashbar')	
+<div class="container containerMargin">	
 	
-	<div class="col-md-10 col-md-offset-2" id="dash">		
+	<div class="col-md-6 col-md-offset-1">		
+
+		<h2 class="page-header">Vijesti</h2>		
 
 	@foreach($vijesti as $v)
 		<div class="vijesti razmakVijesti">
