@@ -153,7 +153,20 @@ class AdminController extends BaseController {
 		return Redirect::route('partneridash');
 	}
 
+	public function Password(){
 
+		return View::make('dash.password');
+	}
+
+	public function PasswordPOST(){
+		if(Hash::check(Input::get('trenutniPW'), Auth::user()->lozinka)){
+			$user = User::find(Auth::user()->id);
+			$user->lozinka = Hash::make(Input::get('noviPW'));
+			$user->save();
+		}
+		
+		return $this->Password();
+	}
 
 	public function Login(){
 		if(Auth::check())

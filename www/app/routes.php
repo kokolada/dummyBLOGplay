@@ -143,6 +143,15 @@ Route::group(array('before' => 'auth'), function()
         'uses' => 'AdminController@PartneriObrisi'
     ));
 
+    Route::get('/dashboard/password', array(
+        'as' => 'passworddash',
+        'uses' => 'AdminController@Password'
+    ));
+
+    Route::post('/dashboard/password', array(
+        'uses' => 'AdminController@PasswordPOST'
+    ));
+
     /*** OVDE ZAVRSAVAJU RUTE ZA SIDEBAR LINKOVE(DASHBOARD) ***/
     //========================================================//
     Route::get('/logout', array(

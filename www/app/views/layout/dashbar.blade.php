@@ -33,6 +33,9 @@
                         <a href="{{route('partneridash')}}"><i class="fa fa-fw fa-users"></i> Partneri</a>
                     </li>
                     <li>
+                        <a href="{{route('passworddash')}}"><i class="fa fa-fw fa-users"></i> Promijeni password</a>
+                    </li>
+                    <li>
                         <a href="{{route('logout')}}"><i class="fa fa-fw fa-sign-out"></i> Logout</a>
                     </li>
                     <!-- <li>
