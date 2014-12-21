@@ -15,7 +15,7 @@
                         <a href="{{route('vijestidash')}}"><i class="fa fa-fw fa-newspaper-o"></i> Vijesti</a>
                     </li>
 		    <li>
-                        <a href="{{route('ocdomdash')}}"><i class="fa fa-fw fa-picture-o"></i> O CDOM Card</a>
+                        <a href="{{route('ocdomdash')}}"><i class="fa fa-fw fa-credit-card"></i> O CDOM Card</a>
                     </li>
                     <li>
                         <a href="{{route('logodash')}}"><i class="fa fa-fw fa-picture-o"></i> Logo stranice</a>
@@ -33,10 +33,10 @@
                         <a href="{{route('partneridash')}}"><i class="fa fa-fw fa-users"></i> Partneri</a>
                     </li>
                     <li>
-                        <a href="{{route('passworddash')}}"><i class="fa fa-fw fa-users"></i> Promijeni password</a>
+                        <a href="{{route('passworddash')}}"><i class="fa fa-fw fa-key"></i> Promijeni password</a>
                     </li>
                     <li>
-                        <a href="{{route('kontaktdash')}}"><i class="fa fa-fw fa-users"></i> Kontakt</a>
+                        <a href="{{route('kontaktdash')}}"><i class="fa fa-fw fa-user"></i> Kontakt</a>
                     </li>
                     <li>
                         <a href="{{route('logout')}}"><i class="fa fa-fw fa-sign-out"></i> Logout</a>

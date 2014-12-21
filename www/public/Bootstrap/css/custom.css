@@ -157,6 +157,35 @@ a:hover {
 	padding-bottom: 20px;
 }
 
+/*KONTAKT*/
+.kontaktInfo {
+	background-color: #66C3FF;
+	padding: 10px;
+	color: white;
+	font-size: 20px;
+}
+
+.kontaktMapa {
+	margin-top: 10px;
+	background-color: #66C3FF;
+	padding: 0;	
+	color: white;
+	font-size: 20px;	
+}
+
+.kontaktMapa p {
+	padding: 10px;
+	margin: 0;
+}
+
+#mapa {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	height: 302px;
+}
+
+
 /* DASHBOARD*/
 #izmjenaLoga {
 	margin: 5% 5% 0 5%;
@@ -206,19 +235,20 @@ a:hover {
 /*login*/
 
 #login {
-	margin-top: 100px;
-	margin-left: 350px;
-	border: 2px solid #66C3FF;
-	border-radius: 4px;
+	margin-top: 160px;
+	margin-left: 300px;
+	/*border: 2px solid #66C3FF;*/
+	/*border-radius: 4px;*/
 	padding-bottom: 20px;
 	color: white;
 	font-size: 16px;
-	background-color: #3C3D34;
+	/*background-color: #3C3D34;*/
 }
 
 #logCont {
 	background-color: #272822;
 }
+
 
 
 

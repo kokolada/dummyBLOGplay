@@ -7,14 +7,11 @@
 </head>
 <body id="logCont">
 	<div class="container">
-		<div class="col-md-4" id="login">
+		<div class="col-md-6" id="login">
 
-			<h3>Login</h3>
-			<hr>
+			<h1>CDOM Dashboard</h1>
 			{{ Form::open() }}
-				<label for="username">Username:</label> 
-				<input class="form-control" type="text" name="username"> <br>
-
+				<br>	
 				<label for="password">Password:</label> 
 				<input class="form-control" type="password" name="password"> <br>
 

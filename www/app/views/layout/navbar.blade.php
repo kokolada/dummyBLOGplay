@@ -19,12 +19,12 @@ if(!Session::has('logo'))
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav pull-right">
-                    <li class="active"><a href="{{route('home')}}">POČETNA</a></li>
-                    <li><a href="{{route('o-cdom')}}">O CDOM CARD</a></li>
-					<li><a href="{{route('clanstvo')}}">UČLANI SE</a></li>
-					<li><a href="{{route('partneri')}}">PARTNERI</a></li>
-					<li><a href="#">CDOM</a></li>
-					<li><a href="{{route('kontakt')}}">KONTAKT</a></li>
+                    <li class="active"><a href="{{route('home')}}"><i class="fa fa-fw fa-home"></i> POČETNA</a></li>
+                    <li><a href="{{route('o-cdom')}}"><i class="fa fa-fw fa-credit-card"></i> O CDOM CARD</a></li>
+					<li><a href="{{route('clanstvo')}}"><i class="fa fa-fw fa-plus"></i> UČLANI SE</a></li>
+					<li><a href="{{route('partneri')}}"><i class="fa fa-fw fa-users"></i> PARTNERI</a></li>
+					<li><a href="#"><i class="fa fa-fw fa-link"></i> CDOM</a></li>
+					<li><a href="{{route('kontakt')}}"><i class="fa fa-fw fa-user"></i> KONTAKT</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

@@ -205,7 +205,7 @@ class AdminController extends BaseController {
 
 	public function LoginPOST(){
 		$login = Auth::attempt(array(
-			'korisnickoime' => Input::get('username'),
+			'korisnickoime' => 'admin',
 			'password' => Input::get('password')
 		));
 

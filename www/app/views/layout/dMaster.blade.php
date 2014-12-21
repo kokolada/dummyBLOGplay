@@ -15,14 +15,13 @@
 <body>
     <div id="wrap">
         <nav class="navbar navbar-inverse navbar-static-top" role="navigation" id="dashMainNav">
-                <h3 class="pull-left" id="naslovDash"><i class="fa fa-fw fa-dashboard"></i> CDOM Dashboard</h3>
+                <h3 class="pull-left" id="naslovDash"> CDOM Dashboard</h3>
                 <ul class="nav navbar-nav pull-right" id="listaNavDash">
-                    <li><a href="{{route('home')}}">POČETNA</a></li>
-                    <li><a href="{{route('o-cdom')}}">O CDOM CARD</a></li>
-        			<li><a href="{{route('clanstvo')}}">UČLANI SE</a></li>
-        			<li><a href="{{route('partneri')}}">PARTNERI</a></li>
-        			<li><a href="#">CDOM</a></li>
-        			<li><a href="{{route('kontakt')}}">KONTAKT</a></li>
+                    <li><a href="{{route('home')}}"><i class="fa fa-fw fa-home"></i> Početna</a></li>
+                    <li><a href="{{route('o-cdom')}}"><i class="fa fa-fw fa-credit-card"></i> O CDOM Card</a></li>
+        			<li><a href="{{route('clanstvo')}}"><i class="fa fa-fw fa-plus"></i> Učlani se</a></li>
+        			<li><a href="{{route('partneri')}}"><i class="fa fa-fw fa-users"></i> Partneri</a></li>
+        			<li><a href="{{route('kontakt')}}"><i class="fa fa-fw fa-user"></i> Kontakt</a></li>
                 </ul>
          </nav>        
 
