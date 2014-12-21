@@ -41,6 +41,10 @@ Route::get('/onlineClanstvo', array(
     'uses' => 'HomeController@OnlineClanstvo'
 ));
 
+Route::post('/onlineClanstvo', array(
+    'uses' => 'HomeController@OnlineClanstvoPOST'
+));
+
 Route::get('/o-cdom', array(
     'as' => 'o-cdom',
     'uses' => 'HomeController@oCdom'

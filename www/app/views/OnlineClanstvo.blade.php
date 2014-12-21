@@ -2,6 +2,7 @@
 
 @section('content')
 
+{{Form::open(array('files' => true))}}
 <div class="container">
 	<div class="col-md-4 col-md-offset-4" id="clanstvo">
 	<h3>Online učlanjenje</h3>
@@ -17,7 +18,7 @@
         </div>
         <div class="form-group form-group-sm">
             <label for="JMGB">Matični broj:</label>
-            <input type="text" class="form-control" name="JMGB" id="usr">
+            <input type="text" class="form-control" name="JMBG" id="usr">
         </div>
         <div class="form-group form-group-sm">
             <label for="Adresa">Adresa:</label>
@@ -30,12 +31,12 @@
         <div class="form-group form-group-sm">
             <label for="usr">Dodaj svoju sliku:</label>
             <br>
-            <input type="file" class="btn btn-default btn-sm" value="Dodaj sliku">
+            {{Form::file('slika', ['class' => 'btn btn-default btn-sm', 'value' => 'Dodaj sliku'])}}
         </div>
         <div class="form-group form-group-sm">
             <label for="usr">Dodaj sliku uplatnice:</label>
             <br>
-            <input type="file" class="btn btn-default btn-sm btn-file" value="Dodaj uplatnicu">
+            {{Form::file('uplatnica', ['class' => 'btn btn-default btn-sm btn-file', 'value' => 'Dodaj uplatnicu'])}}
         </div>
         <hr>
         <input type="submit" class="btn btn-primary pull-right" value="Učlani se">
@@ -43,5 +44,5 @@
     </div>
 </div>
 
-
+{{Form::close()}}
 @stop

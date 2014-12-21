@@ -1,3 +1,10 @@
+{{$partner->naziv}} <br>
+{{$partner->sajt}} <br>
+{{$partner->slika}} <br>
+{{$partner->opartneru}} <br>
+{{$partner->grupa}} <br>
+GRUPA JE ONO GOLD MAXI BLA BLA DODACU JA IF USLOV ZA BOJU OBRUBA I TO... kad dodje na red <br>
+i pogodnosti se nigdje ne unose, kad dodje na red call me
 <div class="modal" id="myModal" role="dialog">
   <div class="modal-dialog">
 	  <div class="modal-content">

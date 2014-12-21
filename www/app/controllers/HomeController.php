@@ -56,9 +56,9 @@ class HomeController extends BaseController {
 		return View::make('partneri', compact('partneri'));
 	}
 
-	public function Partner(){
-
-		return View::make('parner');
+	public function Partner($id){
+		$partner = DB::table('partneri')->where('id', $id)->first();
+		return View::make('partner', compact('partner'));
 	}
 
 	public function Clanstvo(){
@@ -69,6 +69,27 @@ class HomeController extends BaseController {
 	public function OnlineClanstvo(){
 
 		return View::make('OnlineClanstvo');
+	}
+
+	public function OnlineClanstvoPOST(){
+		$slika = Image::upload($_FILES['slika']);
+		$uplatnica = Image::upload($_FILES['uplatnica']);
+		Mail::send(
+			'emails.mailview',
+			array(
+				'ime' => Input::get('Ime'),
+				'prezime' => Input::get('Prezime'),
+				'jmbg' => Input::get('JMBG'),
+				'adresa' => Input::get('Adresa'),
+				'datum' => Input::get('Datum'),
+				'slika' => $slika,
+				'uplatnica' => $uplatnica
+			),
+			function($message){
+				$message->from('cdom.prijave@cdom.ba', 'CDOMPrijave');
+    			$message->to('harun.cavcic@gmail.com', 'CDOM')->subject('CDOM prijava');
+		});
+		return Redirect::route('home');
 	}
 
 	public function oCdom(){
