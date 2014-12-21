@@ -208,7 +208,7 @@ class AdminController extends BaseController {
         $file            = Input::file('pdf');
         if($file->getMimeType() == 'application/pdf'){
         	$destinationPath = public_path().'/pdf/';
-        	$filename        = str_random(6) . '_' . $file->getClientOriginalName();
+        	$filename        = str_random(6).'.pdf';
         	$uploadSuccess   = $file->move($destinationPath, $filename);
         	DB::table('cdompdf')->insert(array('filename' => $filename, 'filepath' => $destinationPath));
     	}

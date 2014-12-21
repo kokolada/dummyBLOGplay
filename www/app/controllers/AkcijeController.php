@@ -10,7 +10,7 @@ class AkcijeController extends BaseController{
 	public function dl(){
         //PDF file is stored under project/public/pdf/
         $pdf = DB::table('cdompdf')->orderBy('id', 'desc')->first();
-        $file= $pdf->filepath.$pdf->filename.'.pdf';
+        $file= $pdf->filepath.$pdf->filename;
         $headers = array(
             'Content-Type' => 'application/pdf',
         );
