@@ -57,7 +57,7 @@
 
 		<div class="col-md-4">
 			<div class="reklame">
-				<a href="#"><img class="razmak" src="http://placehold.it/360x136/612b65/fff&amp;text=SedmicneVijesti.pdf"></a>
+				<a href="{{route('dl')}}"><img class="razmak" src="http://placehold.it/360x136/612b65/fff&amp;text=SedmicneVijesti.pdf"></a>
 				<a href="#"><img class="razmak" src="http://placehold.it/360x300/43609C/fff&amp;text=Facebook"></a>
 			</div>
 		</div>

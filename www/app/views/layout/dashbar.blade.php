@@ -39,6 +39,9 @@
                         <a href="{{route('kontaktdash')}}"><i class="fa fa-fw fa-users"></i> Kontakt</a>
                     </li>
                     <li>
+                        <a href="{{route('pdfdash')}}"><i class="fa fa-fw fa-users"></i> PDF vijesti</a>
+                    </li>
+                    <li>
                         <a href="{{route('logout')}}"><i class="fa fa-fw fa-sign-out"></i> Logout</a>
                     </li>
                     <!-- <li>

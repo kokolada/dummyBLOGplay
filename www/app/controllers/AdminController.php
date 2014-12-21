@@ -196,6 +196,27 @@ class AdminController extends BaseController {
 		return $this->Kontakt();
 	}
 
+	public function Pdf(){
+		return View::make('dash.pdf');
+	}
+
+	public function PdfPOST(){
+	$destinationPath = '';
+    $filename        = '';
+
+    if (Input::hasFile('pdf')) {
+        $file            = Input::file('pdf');
+        if($file->getMimeType() == 'application/pdf'){
+        	$destinationPath = public_path().'/pdf/';
+        	$filename        = str_random(6) . '_' . $file->getClientOriginalName();
+        	$uploadSuccess   = $file->move($destinationPath, $filename);
+        	DB::table('cdompdf')->insert(array('filename' => $filename, 'filepath' => $destinationPath));
+    	}
+    }
+
+		return View::make('dash.pdf');
+	}
+
 	public function Login(){
 		if(Auth::check())
 			return Redirect::route('dashboard');
