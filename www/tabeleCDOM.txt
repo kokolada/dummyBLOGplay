@@ -63,3 +63,9 @@ create table kontakt(
 	telefon varchar(30),
 	adresa varchar(30)
 )
+
+create table cdompdf(
+	id int auto_increment primary key,
+	filename varchar(50),
+	filepath varchar(50)
+)

@@ -30,6 +30,11 @@ Route::get('/kontakt', array(
     'uses' => 'HomeController@Kontakt'
 ));
 
+Route::get('/dl', array(
+    'as' => 'dl',
+    'uses' => 'AkcijeController@dl'
+));
+
 /*HARUN KELJAO, ISPRAVI*/
 Route::get('/onlineClanstvo', array(
     'as' => 'onlineclanstvo',
@@ -164,6 +169,15 @@ Route::group(array('before' => 'auth'), function()
 
     Route::post('/dashboard/kontakt', array(
         'uses' => 'AdminController@KontaktPOST'
+    ));
+
+    Route::get('/dashboard/pdf', array(
+        'as' => 'pdfdash',
+        'uses' => 'AdminController@Pdf'
+    ));
+
+    Route::post('/dashboard/pdf', array(
+        'uses' => 'AdminController@PdfPOST'
     ));
 
     /*** OVDE ZAVRSAVAJU RUTE ZA SIDEBAR LINKOVE(DASHBOARD) ***/
