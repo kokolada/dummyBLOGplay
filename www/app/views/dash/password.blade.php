@@ -10,9 +10,9 @@
 		{{Form::open()}}
 			<div id="izmjenaLoga">
 				{{Form::label('trenutniPW', 'Stari password: ')}}
-				{{Form::text('trenutniPW', null, ['class' => 'form-control'])}} <br>
+				{{Form::text('trenutniPW', null, ['class' => 'form-control','required' => 'required'])}} <br>
 				{{Form::label('noviPW', 'Novi password: ')}}
-				{{Form::text('noviPW', null, ['class' => 'form-control'])}}
+				{{Form::text('noviPW', null, ['class' => 'form-control','required' => 'required'])}}
 				<hr>
 				{{Form::submit('Sačuvaj', ['class' => 'btn btn-primary pull-right'])}}
 			</div>

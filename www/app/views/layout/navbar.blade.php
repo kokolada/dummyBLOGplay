@@ -23,7 +23,7 @@ if(!Session::has('logo'))
                     <li name="ocdom"><a href="{{route('o-cdom')}}"><i class="fa fa-fw fa-credit-card"></i> O CDOM CARD</a></li>
 					<li name="uclanise"><a href="{{route('clanstvo')}}"><i class="fa fa-fw fa-plus"></i> UČLANI SE</a></li>
 					<li name="partneri"><a href="{{route('partneri')}}"><i class="fa fa-fw fa-users"></i> PARTNERI</a></li>
-					<li ><a target="_blank" href="http://www.google.ba"><i class="fa fa-fw fa-link"></i> CDOM</a></li>
+					<li ><a target="_blank" href="http://www.c-dom.org"><i class="fa fa-fw fa-link"></i> CDOM</a></li>
 					<li name="kontakt"><a href="{{route('kontakt')}}"><i class="fa fa-fw fa-user"></i> KONTAKT</a></li>
                 </ul>
             </div>

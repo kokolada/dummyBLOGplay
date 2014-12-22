@@ -68,16 +68,16 @@
 		</div>
 		<div class="panel-body">
 			{{Form::label('naziv', 'Naziv:')}}
-			{{Form::text('naziv', null, ['placeholder' => 'naziv','class' => 'form-control'])}} <br>
+			{{Form::text('naziv', null, ['placeholder' => 'naziv','class' => 'form-control', 'required' => 'required'])}} <br>
 
 			{{Form::label('sajt', 'Web stranica:')}}			
 			{{Form::text('sajt', null, ['placeholder' => 'web stranica','class' => 'form-control'])}} <br>
 			
 			{{Form::label('slika', 'Slika:')}}	
-			{{Form::file('slika', ['class' => 'btn btn-default btn-sm'])}} <br>
+			{{Form::file('slika', ['class' => 'btn btn-default btn-sm','required' => 'required'])}} <br>
 			
 			{{Form::label('opartneru', 'Opartneru:')}}
-			{{Form::textarea('opartneru')}} <br>
+			{{Form::textarea('opartneru', null, ['required' => 'required'])}} <br>
 			<div class="col-md-6" id="#noPadd">
 			{{Form::label('kategorija', 'Kategorija:')}}
 			{{Form::select('kategorija', array('1' => 'gold', '2' => 'maxi', '3' => 'midi', '4' => 'mini'),null, array('class' => 'form-control'))}}<br>

@@ -2,16 +2,16 @@
 	
 	<div class="form-group ">
         <label for="naslov">Naslov:</label>
-        <input type="text" class="form-control" name="naslov" id="naslov" placeholder="Unesi naslov">
+        <input required type="text" class="form-control" name="naslov" id="naslov" placeholder="Unesi naslov">
     </div>
     <div class="form-group">
         <label for="textarea">Sadržaj:</label>
-        <textarea class="form-control" name="textarea" id="textarea">Ovdje unesi sadržaj vijesti..</textarea>
+        <textarea required class="form-control" name="textarea" id="textarea">Ovdje unesi sadržaj vijesti..</textarea>
     </div>
 	<div class="form-group form-group-sm">
         <label for="slika">Dodaj sliku:</label>
         <br>
-        <input type="file" id="slika" name="slika" class="btn btn-default btn-sm" value="Dodaj sliku">
+        <input required type="file" id="slika" name="slika" class="btn btn-default btn-sm" value="Dodaj sliku">
     </div>
 	<hr>
     <input type="submit" class="btn btn-primary pull-right" value="Dodaj vijest">

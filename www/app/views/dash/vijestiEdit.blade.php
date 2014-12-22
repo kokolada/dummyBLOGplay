@@ -4,7 +4,7 @@
 
 <div class="container containerMargin">	
 	
-	<div class="col-md-6 col-md-offset-1">		
+	<div class="col-md-9 col-md-offset-1">		
 
 		<h2 class="page-header"><i class="fa fa-fw fa-pencil"></i> Uredi vijest</h2>		
 

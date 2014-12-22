@@ -10,7 +10,7 @@
 		{{Form::open(array('files' => true))}}
 			<div id="izmjenaLoga">
 				{{Form::label('pdf', 'Promijeni PDF:')}}
-				{{Form::file('pdf', ['class' => 'btn btn-default btn-sm'])}}
+				{{Form::file('pdf', ['class' => 'btn btn-default btn-sm','required' => 'required'])}}
 				<hr>
 				{{Form::submit('Sačuvaj', ['class' => 'btn btn-primary pull-right'])}}
 			</div>

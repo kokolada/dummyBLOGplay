@@ -18,34 +18,40 @@
 				<h4 align="center">Reklame pool 1</h4>
 				<hr>
 				<div class="row">
+				@if(isset($reklame['reklame1']))
 				@foreach($reklame['reklame1'] as $r1)
 					<div class="col-md-3">
 						<img class="img-responsive imageBanner" src="{{$r1->slika}}">
 						<center><a class="btn btn-default btn-xs odmakni" href="{{route('reklamedashObrisi', $r1->id)}}"><i class="fa fa-fw fa-trash"></i> Obriši</a></center>
 					</div>
 				@endforeach
+				@endif
 				</div>
 
 				<h4 align="center">Reklame pool 2</h4>
 				<hr>
 				<div class="row">
+				@if(isset($reklame['reklame2']))
 				@foreach($reklame['reklame2'] as $r2)
 					<div class="col-md-3">
-						<img class="img-responsive imageBanner" src="{{$r1->slika}}">
-						<center><a class="btn btn-default btn-xs odmakni" href="{{route('reklamedashObrisi', $r1->id)}}"><i class="fa fa-fw fa-trash"></i> Obriši</a></center>
+						<img class="img-responsive imageBanner" src="{{$r2->slika}}">
+						<center><a class="btn btn-default btn-xs odmakni" href="{{route('reklamedashObrisi', $r2->id)}}"><i class="fa fa-fw fa-trash"></i> Obriši</a></center>
 					</div>
 				@endforeach
+				@endif
 				</div>
 
 				<h4 align="center">Reklame pool 3</h4>
 				<hr>
 				<div class="row">
+				@if(isset($reklame['reklame3']))
 				@foreach($reklame['reklame3'] as $r3)
 					<div class="col-md-3">
-						<img class="img-responsive imageBanner" src="{{$r1->slika}}">
-						<center><a class="btn btn-default btn-xs odmakni" href="{{route('reklamedashObrisi', $r1->id)}}"><i class="fa fa-fw fa-trash"></i> Obriši</a></center>
+						<img class="img-responsive imageBanner" src="{{$r3->slika}}">
+						<center><a class="btn btn-default btn-xs odmakni" href="{{route('reklamedashObrisi', $r3->id)}}"><i class="fa fa-fw fa-trash"></i> Obriši</a></center>
 					</div>
 				@endforeach
+				@endif
 				</div>
 			</div>
 		</div>
@@ -58,7 +64,7 @@
 			</div>
 			<div class="panel-body">
 				{{Form::label('slika', 'Slika:')}}
-				{{Form::file('slika',['class' => 'btn btn-default btn-sm'])}} <br>
+				{{Form::file('slika',['class' => 'btn btn-default btn-sm','required' => 'required'])}} <br>
 				<div class="col-md-6" id="noPadd">
 					{{Form::label('kategorija', 'Kategorija:')}}		
 					{{Form::select('kategorija', array('1' => 'pool1', '2' => 'pool2', '3' => 'pool3'),null, array('class' => 'form-control'))}} <br>

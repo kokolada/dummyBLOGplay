@@ -3,7 +3,7 @@
             <div class="carousel-inner">
 
                 <!-- <div class="item active">
-                    <img class="img-responsive reklame123" src="{{$home['vijesti'][0]->slika}}">
+                    <img class="img-responsive reklame123" src="">
                 </div> -->
                 <div class="item active">
                     <img class="img-responsive reklame123" src="http://placehold.it/340x120/66C3FF/000&amp;text=Product+Image+2">
@@ -29,4 +29,3 @@
             </div>
         </div> 
  
-

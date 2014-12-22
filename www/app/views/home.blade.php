@@ -20,12 +20,24 @@
 		<div class="col-md-4">
 			<section name="3 reklame">
 			<ul class="reklame">
-				<!-- <li><a href="#"><img class="img-responsive reklame123" src="{{$home['reklame']['reklame1'][0]->slika}}"></a></li>
+				<!-- 
 				<li><a href="#"><img class="img-responsive reklame123" src="{{$home['reklame']['reklame2'][0]->slika}}"></a></li>
 				<li><a href="#"><img class="img-responsive reklame123" src="{{$home['reklame']['reklame3'][0]->slika}}"></a></li> -->
+				@if(!isset($home['reklame']['reklame1'][0]))
+				<li><img class="img-responsive reklama123 razmak" src="http://placehold.it/750x250/ff00ff/fff&amp;text=reklama+pool+1" alt="reklama"></li>
+				@else
 				<li>@include('Home/reklamePool1')</li>
+				@endif
+				@if(!isset($home['reklame']['reklame2'][0]))
+				<li><img class="img-responsive reklama123 razmak" src="http://placehold.it/750x250/ff00ff/fff&amp;text=reklama+pool+2" alt="reklama"></li>
+				@else
 				<li>@include('Home/reklamePool1')</li>
+				@endif
+				@if(!isset($home['reklame']['reklame3'][0]))
+				<li><img class="img-responsive reklama123 razmak" src="http://placehold.it/750x250/ff00ff/fff&amp;text=reklama+pool+3" alt="reklama"></li>
+				@else
 				<li>@include('Home/reklamePool1')</li>
+				@endif
 				
 			</ul>				 
 			</section>
@@ -52,7 +64,7 @@
 				<a href="{{route('vijest', $v->id)}}"><img class="slikaVijesti" src="{{$v->slika}}"></a>
 				<div class="infoVijest">
 					<a href="{{route('vijest', $v->id)}}" alt=""><h3 id="naslovVijesti">{{$v->naslov}}</h3></a>
-					<p>{{$v->sadrzaj}}</p>
+					<p>{{substr($v->sadrzaj,0,385).'...'}}</p>
 				</div>
 			</div>
 		@endforeach
@@ -62,7 +74,7 @@
 		<div class="col-md-4">
 			<div class="reklame">
 				<a href="{{route('dl')}}"><img class="razmak" src="http://placehold.it/360x136/612b65/fff&amp;text=SedmicneVijesti.pdf"></a>
-				<a href="#"><img class="razmak" src="http://placehold.it/360x300/43609C/fff&amp;text=Facebook"></a>
+				<a target="_blank" href="http://www.facebook.com/cdomcard"><img class="razmak" src="http://placehold.it/360x300/43609C/fff&amp;text=Facebook"></a>
 			</div>
 		</div>
 	</div>
