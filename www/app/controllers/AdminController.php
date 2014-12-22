@@ -8,16 +8,18 @@ class AdminController extends BaseController {
 	}
 
 	public function DashboardPOST(){
-		Input::file('slika')!=null ? $url = Image::upload($_FILES['slika']) : $url = null;
+		if(substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
+			Input::file('slika')!=null ? $url = Image::upload($_FILES['slika']) : $url = null;
 		
-		Vijest::create(array(
-			'naslov' => Input::get('naslov'),
-			'sadrzaj' => Input::get('textarea'),
-			'slika' => $url,
-			'korisnik_id' => Auth::user()->id
-		));
+			Vijest::create(array(
+				'naslov' => Input::get('naslov'),
+				'sadrzaj' => Input::get('textarea'),
+				'slika' => $url,
+				'korisnik_id' => Auth::user()->id
+			));
+		}
 
-		return View::make('dashboard');
+		return View::make('dashboard')->with('info', 'Vijest uspješno objavljena.');
 	}
 
 	public function Vijesti(){
@@ -36,17 +38,19 @@ class AdminController extends BaseController {
 	}
 
 	public function VijestiEditPOST($id){
-		$vijest = Vijest::find($id);	
+		if(substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
+			$vijest = Vijest::find($id);	
 
-		if(Input::file('slika')!=null){
-			$url = Image::upload($_FILES['slika']);
-			$vijest->slika = $url;
-		}
+			if(Input::file('slika')!=null){
+				$url = Image::upload($_FILES['slika']);
+				$vijest->slika = $url;
+			}
 		
-		$vijest->naslov = Input::get('naslov');
-		$vijest->sadrzaj = Input::get('sadrzaj');
+			$vijest->naslov = Input::get('naslov');
+			$vijest->sadrzaj = Input::get('sadrzaj');
 
-		$vijest->save();
+			$vijest->save();
+		}
 
 		return Redirect::route('vijestidash');
 	}
@@ -57,8 +61,10 @@ class AdminController extends BaseController {
 	}
 
 	public function LogoPOST(){
-		$url = Image::upload($_FILES['slika']);
-		DB::table('logo')->insert(array('link' => $url));
+		if(substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
+			$url = Image::upload($_FILES['slika']);
+			DB::table('logo')->insert(array('link' => $url));
+		}
 
 		return $this->Logo();
 	}
@@ -69,13 +75,16 @@ class AdminController extends BaseController {
 	}
 
 	public function oCdomCardPOST(){
-		if(Input::file('slika')!=null){
-			$url = Image::upload($_FILES['slika']);
+		if(substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
+			if(Input::file('slika')!=null){
+				$url = Image::upload($_FILES['slika']);
+			}
+			else{
+				$url = Input::get('stariurl');
+			}
+			DB::table('ocdomcard')->insert(array('opis' => Input::get('ocdom'), 'slika' => $url));
 		}
-		else{
-			$url = Input::get('stariurl');
-		}
-		DB::table('ocdomcard')->insert(array('opis' => Input::get('ocdom'), 'slika' => $url));
+
 		return $this->oCdomCard();
 	}
 
@@ -85,8 +94,10 @@ class AdminController extends BaseController {
 	}
 
 	public function BanerVelikiPOST(){
-		$url = Image::upload($_FILES['slika']);
-		DB::table('baneri')->insert(array('tip' => 1, 'slika' => $url));
+		if(substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
+			$url = Image::upload($_FILES['slika']);
+			DB::table('baneri')->insert(array('tip' => 1, 'slika' => $url));
+		}
 
 		return $this->BanerVeliki();
 	}
@@ -97,8 +108,10 @@ class AdminController extends BaseController {
 	}
 
 	public function BanerMaliPOST(){
-		$url = Image::upload($_FILES['slika']);
-		DB::table('baneri')->insert(array('tip' => 2, 'slika' => $url));
+		if(substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
+			$url = Image::upload($_FILES['slika']);
+			DB::table('baneri')->insert(array('tip' => 2, 'slika' => $url));
+		}
 
 		return $this->BanerMali();
 	}
@@ -113,8 +126,10 @@ class AdminController extends BaseController {
 	}
 
 	public function ReklamePOST(){
-		$url = Image::upload($_FILES['slika']);
-		DB::table('reklame')->insert(array('broj' => Input::get('kategorija'), 'slika' => $url));
+		if(substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
+			$url = Image::upload($_FILES['slika']);
+			DB::table('reklame')->insert(array('broj' => Input::get('kategorija'), 'slika' => $url));
+		}
 
 		return $this->Reklame();
 	}
@@ -140,15 +155,16 @@ class AdminController extends BaseController {
 	}
 
 	public function PartneriPOST(){
-		$url = Image::upload($_FILES['slika']);
-		DB::table('partneri')->insert(array(
-			'naziv' => Input::get('naziv'),
-			'sajt' => Input::get('sajt'),
-			'slika' => $url,
-			'opartneru' => Input::get('opartneru'),
-			'grupa' => Input::get('kategorija')
-		));	
-
+		if(substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
+			$url = Image::upload($_FILES['slika']);
+			DB::table('partneri')->insert(array(
+				'naziv' => Input::get('naziv'),
+				'sajt' => Input::get('sajt'),
+				'slika' => $url,
+				'opartneru' => Input::get('opartneru'),
+				'grupa' => Input::get('kategorija')
+			));	
+		}
 		return $this->Partneri();
 	}
 
@@ -179,15 +195,8 @@ class AdminController extends BaseController {
 	}
 
 	public function KontaktPOST(){
-		if(Input::file('slika')!=null){
-			$url = Image::upload($_FILES['slika']);
-		}
-		else{
-			$url = Input::get('stariurl');
-		}
-
 		DB::table('kontakt')->where('id', 1)->update(array(
-			'slika' => $url,
+			'slika' => null,
 			'email' => Input::get('email'),
 			'telefon' => Input::get('telefon'),
 			'adresa' => Input::get('adresa')

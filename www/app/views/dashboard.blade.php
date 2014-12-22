@@ -1,8 +1,12 @@
 @extends('layout.dMaster')
 @section('content')
+
 @include('layout.dashbar')	
 
 <div class="container containerMargin" name="nvijest">	
+@if(isset($info))
+	<div class="alert alert-success">{{$info}}</div>
+@endif
 	
 	<div class="col-md-9 col-md-offset-1">		
 
