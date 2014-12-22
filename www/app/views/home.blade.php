@@ -1,8 +1,10 @@
 @extends('layout.master')
 
 @section('content')
-
 <div class="container" name="pocetna">
+@if(isset($info))
+	<div class="alert alert-success">{{$info}}</div>
+@endif
 	<div class="row razmak">
 		<div class="col-md-12" >
 			<a href="#">
@@ -31,12 +33,12 @@
 				@if(!isset($home['reklame']['reklame2'][0]))
 				<li><img class="img-responsive reklama123 razmak" src="http://placehold.it/750x250/ff00ff/fff&amp;text=reklama+pool+2" alt="reklama"></li>
 				@else
-				<li>@include('Home/reklamePool1')</li>
+				<li>@include('Home/reklamePool2')</li>
 				@endif
 				@if(!isset($home['reklame']['reklame3'][0]))
 				<li><img class="img-responsive reklama123 razmak" src="http://placehold.it/750x250/ff00ff/fff&amp;text=reklama+pool+3" alt="reklama"></li>
 				@else
-				<li>@include('Home/reklamePool1')</li>
+				<li>@include('Home/reklamePool3')</li>
 				@endif
 				
 			</ul>				 

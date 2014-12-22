@@ -3,27 +3,36 @@
             <div class="carousel-inner">
                 <div class="item active">
                     <img src="http://placehold.it/750x250/e8117f/fff&amp;text=Product+Main">
+                    <div class="textVijest">Danas u Sarajevu bilo svasta</div>
                 </div>
                 <div class="item">
                     <img src="http://placehold.it/750x250/66C3FF/000&amp;text=Product+Image+2">
+                    <div class="textVijest">neki text</div>
+
                 </div>
                 <div class="item">
                     <img src="http://placehold.it/750x250/ff00ff/fff&amp;text=Product+Image+3">
+                    <div class="textVijest">neki text</div>
                 </div>
                 <div class="item">
                     <img src="http://placehold.it/750x250/ffff00/000&amp;text=Product+Image+4">
+                    <div class="textVijest">neki text</div>
                 </div>
                 <div class="item">
                     <img src="http://placehold.it/750x250/612b65/fff&amp;text=Product+Image+5">
+                    <div class="textVijest">neki text</div>
                 </div>
                 <div class="item">
                     <img src="http://placehold.it/750x250/00ffff/000&amp;text=Product+Image+6">
+                    <div class="textVijest">neki text</div>
                 </div>
                 <div class="item">
                     <img src="http://placehold.it/750x250/db371b/fff&amp;text=Product+Image+7">
+                    <div class="textVijest">neki text</div>
                 </div>
                 <div class="item">
                     <img src="http://placehold.it/750x250/feb8aa/000&amp;text=Product+Image+8">
+                    <div class="textVijest">neki text</div>
                 </div>
             </div>
         </div> 
