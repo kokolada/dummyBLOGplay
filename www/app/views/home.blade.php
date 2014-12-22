@@ -81,7 +81,9 @@
 		</div>
 	</div>
 
-
+<div>
+	{{$home['vijesti']->links()}}
+</div>
 
 </div>
 
