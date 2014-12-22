@@ -6,7 +6,7 @@
 	
 	<div class="col-md-6 col-md-offset-1">		
 
-		<h2 class="page-header">Uredi vijest</h2>		
+		<h2 class="page-header"><i class="fa fa-fw fa-pencil"></i> Uredi vijest</h2>		
 
 	{{Form::model($vijest, array(
 			'route' => array('vijestidashEdit', $vijest->id),

@@ -2,10 +2,10 @@
 @section('content')
 @include('layout.dashbar')	
 
-<div class="container containerMargin">		
+<div class="container containerMargin" name="reklame">		
 	<div class="col-md-9 col-md-offset-1">		
 	
-	<h2 class="page-header">Uredi reklame</h2>	
+	<h2 class="page-header"><i class="fa fa-fw fa-pencil"></i> Uredi reklame</h2>	
 
 		{{Form::open(array('files' => true))}}
 
@@ -21,7 +21,7 @@
 				@foreach($reklame['reklame1'] as $r1)
 					<div class="col-md-3">
 						<img class="img-responsive imageBanner" src="{{$r1->slika}}">
-						<center><a class="btn btn-warning btn-xs odmakni" href="{{route('reklamedashObrisi', $r1->id)}}">Obriši</a></center>
+						<center><a class="btn btn-default btn-xs odmakni" href="{{route('reklamedashObrisi', $r1->id)}}"><i class="fa fa-fw fa-trash"></i> Obriši</a></center>
 					</div>
 				@endforeach
 				</div>
@@ -32,7 +32,7 @@
 				@foreach($reklame['reklame2'] as $r2)
 					<div class="col-md-3">
 						<img class="img-responsive imageBanner" src="{{$r1->slika}}">
-						<center><a class="btn btn-warning btn-xs odmakni" href="{{route('reklamedashObrisi', $r1->id)}}">Obriši</a></center>
+						<center><a class="btn btn-default btn-xs odmakni" href="{{route('reklamedashObrisi', $r1->id)}}"><i class="fa fa-fw fa-trash"></i> Obriši</a></center>
 					</div>
 				@endforeach
 				</div>
@@ -43,7 +43,7 @@
 				@foreach($reklame['reklame3'] as $r3)
 					<div class="col-md-3">
 						<img class="img-responsive imageBanner" src="{{$r1->slika}}">
-						<center><a class="btn btn-warning btn-xs odmakni" href="{{route('reklamedashObrisi', $r1->id)}}">Obriši</a></center>
+						<center><a class="btn btn-default btn-xs odmakni" href="{{route('reklamedashObrisi', $r1->id)}}"><i class="fa fa-fw fa-trash"></i> Obriši</a></center>
 					</div>
 				@endforeach
 				</div>

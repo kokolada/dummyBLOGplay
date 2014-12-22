@@ -2,9 +2,9 @@
 
 @section('content')
 
-<div class="container">
+<div class="container" name="kontakt">
 	<div class="col-md-8 col-md-offset-2" >
-		<h1 class="page-header">Kontakt</h1>
+		<h1 class="page-header"><i class="fa fa-fw fa-user"></i> Kontakt</h1>
 		<div class="col-md-10 col-md-offset-1">		 	
 			<h4>
 				<div class="kontaktInfo">

@@ -2,12 +2,12 @@
 
 @section('content')
 
-<div class="container">
+<div class="container" name="pocetna">
 	<div class="row razmak">
-		<div class="col-md-12">
+		<div class="col-md-12" >
 			<a href="#">
 			<!-- <img class="img-responsive imageBanner" src="http://placehold.it/780x140/612b65/fff&amp;text=Partner+1"> -->
-			<img class="img-responsive imageBanner" src="{{$home['banerv']}}">
+			<img class="img-responsive imageBanner velikiBanner" src="{{$home['banerv']}}">
 			</a>
 		</div>
 	</div>
@@ -20,9 +20,13 @@
 		<div class="col-md-4">
 			<section name="3 reklame">
 			<ul class="reklame">
-				<li><a href="#"><img class="img-responsive reklame123" src="{{$home['reklame']['reklame1'][0]->slika}}"></a></li>
+				<!-- <li><a href="#"><img class="img-responsive reklame123" src="{{$home['reklame']['reklame1'][0]->slika}}"></a></li>
 				<li><a href="#"><img class="img-responsive reklame123" src="{{$home['reklame']['reklame2'][0]->slika}}"></a></li>
-				<li><a href="#"><img class="img-responsive reklame123" src="{{$home['reklame']['reklame3'][0]->slika}}"></a></li>
+				<li><a href="#"><img class="img-responsive reklame123" src="{{$home['reklame']['reklame3'][0]->slika}}"></a></li> -->
+				<li>@include('Home/reklamePool1')</li>
+				<li>@include('Home/reklamePool1')</li>
+				<li>@include('Home/reklamePool1')</li>
+				
 			</ul>				 
 			</section>
 		</div>
@@ -31,11 +35,11 @@
 	<div class="row razmak">
 		<div class="col-md-8">
 			<section name="banner">
-				<a href="#"><img class="img-responsive imageBanner" src="{{$home['banerm']}}"></a>
+				<a href="#"><img class="img-responsive imageBanner maliBanner" src="{{$home['banerm']}}"></a>
 			</section>
 		</div>
 		<div class="col-md-4">
-			<a href="#"><img class="img-responsive" src="http://placehold.it/360x136/e8117f/fff&amp;text=Uclani+se"></a>
+			<a href="{{route('clanstvo')}}"><img class="img-responsive maliBanner imageBanner" src="/img/uclanise.png"></a>
 		</div>
 	</div> 
 

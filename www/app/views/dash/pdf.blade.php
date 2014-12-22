@@ -2,10 +2,10 @@
 @section('content')
 @include('layout.dashbar')	
 
-<div class="container containerMargin">	
+<div class="container containerMargin" name="pdf">	
 	
 	<div class="col-md-6 col-md-offset-1">
-		<h2 class="page-header">PDF vijesti</h2>
+		<h2 class="page-header"><i class="fa fa-fw fa-pencil"></i> PDF vijesti</h2>
 
 		{{Form::open(array('files' => true))}}
 			<div id="izmjenaLoga">

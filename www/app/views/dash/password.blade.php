@@ -2,10 +2,10 @@
 @section('content')
 @include('layout.dashbar')	
 
-<div class="container containerMargin">		
+<div class="container containerMargin" name="pw">		
 	<div class="col-md-6 col-md-offset-1">		
 	
-	<h2 class="page-header">Promijeni password</h2>		
+	<h2 class="page-header"><i class="fa fa-fw fa-pencil"></i> Promijeni password</h2>		
 
 		{{Form::open()}}
 			<div id="izmjenaLoga">

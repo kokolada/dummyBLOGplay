@@ -8,37 +8,37 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="">
                 <ul class="nav navbar-nav side-nav">
-                    <li>
+                    <li name="nvijest">
                         <a href="{{route('dashboard')}}"><i class="fa fa-fw fa-plus"></i> Nova vijest</a>
                     </li>
-                    <li>
+                    <li name="vijesti">
                         <a href="{{route('vijestidash')}}"><i class="fa fa-fw fa-newspaper-o"></i> Vijesti</a>
                     </li>
-		    <li>
+		    <li name="ocdom">
                         <a href="{{route('ocdomdash')}}"><i class="fa fa-fw fa-credit-card"></i> O CDOM Card</a>
                     </li>
-                    <li>
+                    <li name="logo">
                         <a href="{{route('logodash')}}"><i class="fa fa-fw fa-picture-o"></i> Logo stranice</a>
                     </li>
-                    <li>
+                    <li name="banerv">
                         <a href="{{route('banervelikidash')}}"><i class="fa fa-fw fa-picture-o"></i> Banner 1</a>
                     </li>
-                    <li class="active">
+                    <li name="banerm">
                         <a href="{{route('banermalidash')}}"><i class="fa fa-fw fa-picture-o"></i> Banner 2</a>
                     </li>
-                    <li>
+                    <li name="reklame">
                         <a href="{{route('reklamedash')}}"><i class="fa fa-fw fa-picture-o"></i> Reklame</a>
                     </li>
-                    <li>
+                    <li name="partneri">
                         <a href="{{route('partneridash')}}"><i class="fa fa-fw fa-users"></i> Partneri</a>
                     </li>
-                    <li>
+                    <li name="pw">
                         <a href="{{route('passworddash')}}"><i class="fa fa-fw fa-key"></i> Promijeni password</a>
                     </li>
-                    <li>
+                    <li name="kontakt">
                         <a href="{{route('kontaktdash')}}"><i class="fa fa-fw fa-user"></i> Kontakt</a>
                     </li>
-                    <li>
+                    <li name="pdf">
                         <a href="{{route('pdfdash')}}"><i class="fa fa-fw fa-users"></i> PDF vijesti</a>
                     </li>
                     <li>
@@ -67,5 +67,6 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("textarea").jqte();
+        $('li[name='+$('div[name]').attr('name')+']').addClass('active');
     });
 </script>

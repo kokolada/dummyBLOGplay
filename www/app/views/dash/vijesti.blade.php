@@ -2,11 +2,11 @@
 @section('content')
 @include('layout.dashbar')	
 
-<div class="container containerMargin">	
+<div class="container containerMargin" name="vijesti">	
 	
 	<div class="col-md-6 col-md-offset-1">		
 
-		<h2 class="page-header">Vijesti</h2>		
+		<h2 class="page-header"><i class="fa fa-fw fa-newspaper-o"></i> Vijesti</h2>		
 
 	@foreach($vijesti as $v)
 		<div class="vijesti razmakVijesti">
@@ -16,8 +16,8 @@
 				<p>{{$v->sadrzaj}}</p>
 			</div>
 			<p>
-				<a href="{{route('vijestidashObrisi', $v->id)}}" class="btn btn-default btn-xs">Obriši</a> 
-				<a href="{{route('vijestidashEdit', $v->id)}}" class="btn btn-default btn-xs">Uredi</a> 
+				<a href="{{route('vijestidashObrisi', $v->id)}}" class="btn btn-default btn-xs"><i class="fa fa-fw fa-trash"></i> Obriši</a> 
+				<a href="{{route('vijestidashEdit', $v->id)}}" class="btn btn-default btn-xs"><i class="fa fa-fw fa-pencil"></i> Uredi</a> 
 			</p>
 		</div>
 		<hr>

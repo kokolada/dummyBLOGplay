@@ -12,10 +12,9 @@
 			<h1>CDOM Dashboard</h1>
 			{{ Form::open() }}
 				<br>	
-				<label for="password">Password:</label> 
-				<input class="form-control" type="password" name="password"> <br>
-
-				<input class="btn btn-info pull-right" type="submit" value="Logiraj se"> <br>
+					<label for="password">Password:</label> 
+					<input class="form-control input-lg" type="password" name="password"> <br>
+				<input class="btn pull-right btn-lg loginButton" type="submit" value="Login"> <br>
 			{{ Form::close() }} 
 
 		</div>

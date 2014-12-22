@@ -2,10 +2,10 @@
 @section('content')
 @include('layout.dashbar')	
 
-<div class="container containerMargin">	
+<div class="container containerMargin" name="logo">	
 	
 	<div class="col-md-6 col-md-offset-1">
-		<h2 class="page-header">Uredi logo stranice</h2>
+		<h2 class="page-header"><i class="fa fa-fw fa-pencil"></i> Uredi logo stranice</h2>
 		<img src="{{$logo->link}}" alt="#" class="img-responsive img-thumbnail" id="izmjenaLoga">
 
 		{{Form::open(array('files' => true))}}

@@ -27,7 +27,8 @@
 
          @yield('content')
 
-     </div>
+     <div id="push"></div>
+    </div>
      @include('layout.footer')
 
      <script type="text/javascript" src="/Bootstrap/js/custom.js"></script>

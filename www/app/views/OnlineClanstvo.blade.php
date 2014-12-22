@@ -4,7 +4,7 @@
 
 {{Form::open(array('files' => true))}}
 <div class="container">
-	<div class="col-md-4 col-md-offset-4" id="clanstvo">
+	<div class="col-md-6 col-md-offset-3" id="clanstvo">
 	<h3>Online učlanjenje</h3>
 	<hr>
     <form>

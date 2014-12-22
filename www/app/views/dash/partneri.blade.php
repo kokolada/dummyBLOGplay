@@ -2,10 +2,10 @@
 @section('content')
 @include('layout.dashbar')	
 
-<div class="container containerMargin">		
+<div class="container containerMargin" name="partneri">		
 	<div class="col-md-9 col-md-offset-1">		
 	
-	<h2 class="page-header">Uredi partnere</h2>
+	<h2 class="page-header"><i class="fa fa-fw fa-pencil"></i> Uredi partnere</h2>
 
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -19,19 +19,21 @@
 		<hr>
 		<div class="row">
 			@foreach($partneri['gold'] as $g)
-
-				@include('Home/goldPartnerThumb')
-				<a class="btn btn-warning btn-xs" href="{{route('partneridashObrisi', $g->id)}}">Obriši</a>
-				
+				<div class="col-md-3">
+					@include('Home/goldPartnerThumb')
+					<center><a class="btn btn-default btn-xs odmakni" href="{{route('partneridashObrisi', $g->id)}}"><i class="fa fa-fw fa-trash"></i> Obriši</a></center>
+				</div>
 			@endforeach
 		</div>
 
 		<h4 align="center">Maxi partneri</h4>
 		<hr>
 		<div class="row">
-			@foreach($partneri['maxi'] as $mx)				
-				@include('Home/maxiPartnerThumb')	
-				<a class="btn btn-warning btn-xs" href="{{route('partneridashObrisi', $mx->id)}}">Obriši</a>				
+			@foreach($partneri['maxi'] as $mx)	
+				<div class="col-md-3">
+					@include('Home/maxiPartnerThumb')	
+					<center><a class="btn btn-default btn-xs odmakni" href="{{route('partneridashObrisi', $mx->id)}}"><i class="fa fa-fw fa-trash"></i> Obriši</a></center>
+				</div>
 			@endforeach
 		</div>
 
@@ -39,10 +41,10 @@
 		<hr>
 		<div class="row">
 			@foreach($partneri['midi'] as $md)
-
-				@include('Home/midiPartnerThumb')
-				<a class="btn btn-warning btn-xs" href="{{route('partneridashObrisi', $md->id)}}">Obriši</a>
-				
+				<div class="col-md-3">
+					@include('Home/midiPartnerThumb')
+					<center><a class="btn btn-default btn-xs odmakni" href="{{route('partneridashObrisi', $md->id)}}"><i class="fa fa-fw fa-trash"></i> Obriši</a></center>
+				</div>
 			@endforeach
 		</div>
 
@@ -50,8 +52,10 @@
 		<hr>
 		<div class="row">
 			@foreach($partneri['mini'] as $mn)
-				@include('Home/miniPartnerThumb')
-				<a class="btn btn-warning btn-xs" href="{{route('partneridashObrisi', $mn->id)}}">Obriši</a>
+				<div class="col-md-3">	
+					@include('Home/miniPartnerThumb')
+					<center><a class="btn btn-default btn-xs odmakni" href="{{route('partneridashObrisi', $mn->id)}}"><i class="fa fa-fw fa-trash"></i> Obriši</a></center>
+				</div>
 			@endforeach
 		</div>
 		</div>

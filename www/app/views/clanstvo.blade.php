@@ -2,13 +2,12 @@
 
 @section('content')
 
-<div class="container">
+<div class="container" name="uclanise">
 	
-	<center><h1>Učlani se</h1></center>
 	<br>
 	
 	<div class="col-md-4 col-md-offset-2" id="licno">
-		<h3>U kancelariji</h3>
+		<h3>Lično učlanjenje</h3>
 		<hr>
 		<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque id, ad nam tempora, aut nesciunt obcaecati incidunt molestiae aspernatur sapiente eligendi. Incidunt quod quae consequatur reiciendis unde ab perferendis tempore.</span><span>Ipsum fuga ipsam porro, esse incidunt laboriosam. Explicabo iusto cum incidunt, dolorum consequuntur maiores placeat fugiat eos iure recusandae cumque voluptate ab delectus quibusdam doloribus ex at accusamus earum distinctio.</span></p>
 		<small>Adresa: Ulica Antonio Aničića br.16</small>

@@ -1,9 +1,11 @@
-<ul class="nav pull-right scroll-top" id="backtotop">
-  <li id="backToTop"><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
-</ul>
-<div id="footer">
-  <div class="container">
-    <p class="text-muted">Copyright © 2014, CDOM Card ukoliko nije drugačije označeno. Sva prava pridržana. <a href="http://www.nadjismjestaj.ba">nadjismjestaj.ba</a></p>
-  </div>
-</div>
+<a href="#" class="scrollToTop"><i class="glyphicon glyphicon-chevron-up"></i></a>
 
+<div id="footer" style="margin-top: 20px;">
+    <div class="container" style="padding-top: 9px;">
+        <ol class="" style="list-style-type: none; display:inline; margin-right: 55%;">
+            <p class="" style="color:white; display: inline;">© Sva prava pridržana od strane <a href="http://www.nadjismjestaj.ba"><strong>cdom.com</strong></a>
+        </ol>
+        <p class="" style="color:white; display: inline;">Powered by <a href="http://www.nadjismjestaj.ba"><strong>nadjismjestaj.ba</strong></a>
+        </p>
+    </div>
+</div>

@@ -6,6 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/Bootstrap/css/custom.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/Bootstrap/css/sliderCss.css">
+	<link rel="stylesheet" type="text/css" href="/Bootstrap/css/lightSlider.css"> -->
 
 	<link href="/Bootstrap/css/sb-admin.css" rel="stylesheet">
 	<link href="/Bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -17,6 +19,7 @@
 	@include('layout.navbar')
 
 	@yield('content')
+	<div id="push"></div>
 	</div>
 	@include('layout.footer')
 	

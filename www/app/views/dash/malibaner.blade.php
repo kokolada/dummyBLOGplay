@@ -2,11 +2,11 @@
 @section('content')
 @include('layout.dashbar')	
 
-<div class="container containerMargin">	
+<div class="container containerMargin" name="banerm">	
 	
 	<div class="col-md-6 col-md-offset-1">		
 
-		<h2 class="page-header">Uredi mali baner</h2>		
+		<h2 class="page-header"><i class="fa fa-fw fa-pencil"></i> Uredi mali baner</h2>		
 		<img src="{{$baner}}" class="img-responsive imageBanner img-thumbnail">
 		
 		{{Form::open(array('files' => true))}}

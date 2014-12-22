@@ -1,13 +1,15 @@
 @extends('layout.master')
 
 @section('content')
-<div class="container" id="partneri">
+<div class="container" id="partneri" name="partneri">
 	<br>
 	<h2>Gold partneri</h2>
 	<hr>
 	<div class="row">
 	@foreach($partneri['gold'] as $g)
-	    @include('Home/goldPartnerThumb')
+		<div class="col-lg-3 col-md-4 col-xs-6 thumb" id="kompanija">
+		    @include('Home/goldPartnerThumb')
+		</div>
 	@endforeach   	    
 	</div>
 	<br>
@@ -15,7 +17,9 @@
 	<hr>
 	<div class="row">
 	@foreach($partneri['maxi'] as $mx)
-	    @include('Home/maxiPartnerThumb')
+		<div class="col-lg-3 col-md-4 col-xs-6 thumb" id="kompanija">
+		    @include('Home/maxiPartnerThumb')
+		</div>
 	@endforeach	    
 	</div>
 	<br>
@@ -23,7 +27,9 @@
 	<hr>
 	<div class="row">
 	@foreach($partneri['midi'] as $md)
-	    @include('Home/midiPartnerThumb')
+		<div class="col-lg-3 col-md-4 col-xs-6 thumb" id="kompanija">
+	   		 @include('Home/midiPartnerThumb')
+	    </div>
 	@endforeach		    
 	</div>
 	<br>
@@ -31,10 +37,11 @@
 	<hr>
 	<div class="row">
 	@foreach($partneri['mini'] as $mn)
-	    @include('Home/miniPartnerThumb')
+		<div class="col-lg-3 col-md-4 col-xs-6 thumb" id="kompanija">
+	   		 @include('Home/miniPartnerThumb')
+	    </div>
 	@endforeach	    
 	</div>
-	@include('partner')
 </div>
 
 @stop

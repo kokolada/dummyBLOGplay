@@ -1,5 +1,8 @@
+
+
 body{
 	margin: 0 auto;
+	background-color: #FAFAF8;
 }
 
 img:hover{
@@ -39,20 +42,18 @@ a:hover {
 
 .navbar a{
 	color: white;
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 
-.navbar .active  {
+
+#navigacija .active a, #navigacija a:hover {
 	background-color: white;
-}
- 
-.navbar .active a,  .navbar a:hover{
 	color: #66C3FF;
 }
 
-.navbar li a:hover {
-	background-color: white;
-}
+
+
+
 
 .navbar-collapse {
 	margin-top: 100px;
@@ -70,6 +71,14 @@ a:hover {
 	overflow: hidden;
 }
 
+.velikiBanner {
+	/*max-height: 300px;*/
+}
+
+.maliBanner {
+	height: 180px;
+}
+
 .reklame{
 	margin: 0;
 	padding: 0;
@@ -80,6 +89,7 @@ a:hover {
 
 .reklame123{
 	margin-bottom: 5%;
+	max-height: 270px;
 }
 
 .slikaVijesti {
@@ -140,6 +150,10 @@ a:hover {
 	text-align: left;
 }
 
+#pozadina{
+	background-color: white;
+}
+
 #pogodnostiLista{
 	list-style-type:circle;
 }
@@ -155,6 +169,7 @@ a:hover {
 	border: 1px solid #66C3FF;
 	border-radius: 4px;
 	padding-bottom: 20px;
+	background-color: #FAFAF8;
 }
 
 /*KONTAKT*/
@@ -168,7 +183,6 @@ a:hover {
 .kontaktMapa {
 	margin-top: 10px;
 	background-color: #66C3FF;
-	padding: 0;	
 	color: white;
 	font-size: 20px;	
 }
@@ -179,10 +193,8 @@ a:hover {
 }
 
 #mapa {
-	margin: 0 auto;
-	padding: 0;
 	width: 100%;
-	height: 302px;
+	height: 300px;
 }
 
 
@@ -249,30 +261,54 @@ a:hover {
 	background-color: #272822;
 }
 
-
-
-
-
-
-
-/*FOOTER (#footer, #wrap)*/
-#footer {
-  height: 60px;
-  background-color: #292929;
-  margin-top:50px;
-  padding-top:20px;
-  padding-bottom:20px;
+.loginButton {
+	background-color: transparent;
+	border: 1px solid #C0C0C0;
 }
 
-#wrap {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
+.loginButton:hover {
+	color: #00A3F0;
+	border: 1px solid #00A3F0;	
 }
+
+.passLogin:hover {
+	border: 1px solid #00A3F0;	
+}
+
+
+ html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -40px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 40px;
+      }
+      #footer {
+        background-color: #727272;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
 
 
 .modal-dialog {}
@@ -295,3 +331,22 @@ a:hover {
 .clickable {
     cursor: pointer;
 }  
+
+.scrollToTop{
+	width:40px; 
+	height:40px;
+	padding:10px; 
+	text-align:center; 
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	position:fixed;
+	top:75%;
+	right:40px;
+	display:none;
+	opacity: 0.7;
+	background-color: #66C3FF;
+}
+.scrollToTop:hover{
+	text-decoration:none;
+}
