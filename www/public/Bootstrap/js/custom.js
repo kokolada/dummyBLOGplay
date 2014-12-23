@@ -1,3 +1,5 @@
+$("html, body").animate({ scrollTop: $('#vijestLokacija').offset().top }, 1000);
+
 /*scroll to top*/
 $(document).ready(function(){
     

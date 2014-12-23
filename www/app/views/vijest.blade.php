@@ -61,7 +61,7 @@
 	<div class="row razmak">
 		<div class="col-md-8">
 			<div class="vijesti">
-				<h2 class="razmak">{{$vijest->naslov}}</h2>
+				<h2 class="razmak" id="vijestLokacija">{{$vijest->naslov}}</h2>
 				<div class="col-md-8 razmak">
 					<a href="#"><img class="img-responsive" src="{{$vijest->slika}}"></a>
 				</div>
