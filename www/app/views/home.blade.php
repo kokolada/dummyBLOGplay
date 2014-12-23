@@ -57,7 +57,7 @@
 
 
 	<div class="row razmak">
-		<div class="col-md-8">
+		<div class="col-md-8" id="poljeZaVijesti">
 
 		@foreach($home['vijesti'] as $v)
 			<div class="vijesti razmakVijesti col-md-12">
@@ -68,15 +68,16 @@
 					<a href="{{route('vijest', $v->id)}}" alt=""><h3 id="naslovVijesti">{{$v->naslov}}</h3></a>
 					<p align="justify">{{substr($v->sadrzaj,0,240).'...'}}</p>
 				</div>
-			</div><hr>
+			</div>
+			<div class="col-md-12"><hr id="linija"></div>
 		@endforeach
 			
 		</div>		
 
 		<div class="col-md-4">
 			<div class="reklame">
-				<a href="{{route('dl')}}"><img class="razmak" src="http://placehold.it/360x136/612b65/fff&amp;text=SedmicneVijesti.pdf"></a>
-				<a target="_blank" href="http://www.facebook.com/cdomcard"><img class="razmak" src="http://placehold.it/360x300/43609C/fff&amp;text=Facebook"></a>
+				<a href="{{route('dl')}}"><img class="razmak" src="/img/pdfSlika.png"></a>
+				<a target="_blank" href="http://www.facebook.com/cdomcard"><img class="razmak" src="/img/facebook.png"></a>
 			</div>
 		</div>
 	</div>
@@ -88,3 +89,5 @@
 </div>
 
 @stop
+
+
