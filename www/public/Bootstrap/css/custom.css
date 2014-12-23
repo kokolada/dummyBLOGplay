@@ -1,8 +1,18 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Light.ttf);
+}
 
+@font-face {
+    font-family: OpenSans;
+    font-weight: bold;
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
 
 body{
 	margin: 0 auto;
 	background-color: #FAFAF8;
+	font-family: OpenSans;
 }
 
 img:hover{
@@ -89,7 +99,7 @@ a:hover {
 
 .reklame123{
 	margin-bottom: 5%;
-	max-height: 270px;
+	max-height: 270px ;
 }
 
 .slikaVijesti {
@@ -101,8 +111,24 @@ a:hover {
 	overflow: hidden;
 }
 
+.vijesti {
+	background-color: white;
+	padding: 10px;
+}
+
+
+
+#naslovVijesti {
+	padding: 0;
+	margin: 0;
+}
+
 .razmakVijesti{
 	margin-bottom: 2px;
+}
+
+.silver {
+	background-color: red;
 }
 
 .textVijest {
@@ -113,6 +139,10 @@ a:hover {
 	text-indent: 10px;
 	max-height: 26px;
 	font-size: 20px
+}
+
+#skraceniText{
+	font-size: 12px;
 }
 
 /* HOME -> CAROUSEL  */
@@ -242,6 +272,7 @@ a:hover {
 }
 
 .slika{
+	margin-top: 25px;
 	margin-bottom: 10px;
 }
 
@@ -251,6 +282,10 @@ a:hover {
 
 .odmakni{
 	margin: 3px;
+}
+
+#naslovCdom {
+	margin-left: 210px;
 }
 
 
@@ -360,3 +395,4 @@ a:hover {
 .scrollToTop:hover{
 	text-decoration:none;
 }
+

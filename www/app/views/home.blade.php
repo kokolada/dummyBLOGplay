@@ -62,13 +62,15 @@
 		<div class="col-md-8">
 
 		@foreach($home['vijesti'] as $v)
-			<div class="vijesti razmakVijesti">
-				<a href="{{route('vijest', $v->id)}}"><img class="slikaVijesti" src="{{$v->slika}}"></a>
-				<div class="infoVijest">
-					<a href="{{route('vijest', $v->id)}}" alt=""><h3 id="naslovVijesti">{{$v->naslov}}</h3></a>
-					<p>{{substr($v->sadrzaj,0,385).'...'}}</p>
+			<div class="vijesti razmakVijesti col-md-12">
+				<div class="col-md-3"> 
+					<a href="{{route('vijest', $v->id)}}"><img class="img-responsive" src="{{$v->slika}}"></a>
 				</div>
-			</div>
+				<div class="col-md-8">
+					<a href="{{route('vijest', $v->id)}}" alt=""><h3 id="naslovVijesti">{{$v->naslov}}</h3></a>
+					<p align="justify">{{substr($v->sadrzaj,0,240).'...'}}</p>
+				</div>
+			</div><hr>
 		@endforeach
 			
 		</div>		

@@ -69,5 +69,3 @@ jQuery(function ($) {
      $('#modalCarousel').carousel(id); // slide carousel to selected
   	
  });
-
-

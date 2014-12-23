@@ -1,5 +1,5 @@
 
-        <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="11000">
             <div class="carousel-inner">
 
                 <!-- <div class="item active">

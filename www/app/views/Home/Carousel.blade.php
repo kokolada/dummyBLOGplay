@@ -1,14 +1,17 @@
 
-        <div id="carousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
+        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+            <div class="carousel-inner" >
                 <div class="item active">
-                    <img src="http://placehold.it/750x250/e8117f/fff&amp;text=Product+Main">
-                    <div class="textVijest">Danas u Sarajevu bilo svasta</div>
+                    <a href="#navijest">
+                        <img src="http://placehold.it/750x250/e8117f/fff&amp;text=Product+Main">
+                        <div class="textVijest">Danas u Sarajevu bilo svašta</div>
+                    </a>
                 </div>
-                <div class="item">
-                    <img src="http://placehold.it/750x250/66C3FF/000&amp;text=Product+Image+2">
-                    <div class="textVijest">neki text</div>
-
+                <div class="item" data-interval="1000">
+                    <a href="#navijest">
+                        <img src="http://placehold.it/750x250/e8117f/fff&amp;text=Product+Main">
+                        <div class="textVijest">Danas u Sarajevu bilo svašta</div>
+                    </a>
                 </div>
                 <div class="item">
                     <img src="http://placehold.it/750x250/ff00ff/fff&amp;text=Product+Image+3">

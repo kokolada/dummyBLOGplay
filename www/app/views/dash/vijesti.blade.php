@@ -10,12 +10,16 @@
 
 	@foreach($vijesti as $v)
 		<div class="vijesti razmakVijesti">
-			<a href="#"><img class="slikaVijesti" src="{{$v->slika}}"></a>
-			<div class="infoVijest">
-				<a href="#" alt=""><h3 id="naslovVijesti">{{$v->naslov}}</h3></a>
-				<p>{{$v->sadrzaj}}</p>
+			<div class="vijesti razmakVijesti col-md-12">
+				<div class="col-md-4"> 
+					<a href="{{route('vijest', $v->id)}}"><img class="img-responsive" src="{{$v->slika}}"></a>
+				</div>
+				<div class="col-md-8">
+					<a href="{{route('vijest', $v->id)}}" alt=""><h3 id="naslovVijesti">{{$v->naslov}}</h3></a>
+					<p align="justify">{{substr($v->sadrzaj,0,240).'...'}}</p>
+				</div>
 			</div>
-			<p>
+			<p align="right">
 				<a href="{{route('vijestidashObrisi', $v->id)}}" class="btn btn-default btn-xs"><i class="fa fa-fw fa-trash"></i> Obriši</a> 
 				<a href="{{route('vijestidashEdit', $v->id)}}" class="btn btn-default btn-xs"><i class="fa fa-fw fa-pencil"></i> Uredi</a> 
 			</p>
