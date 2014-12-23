@@ -21,7 +21,7 @@
 			
 			<div class="kontaktMapa">					
 				<p><i class="fa fa-fw fa-location-arrow"></i> {{$kontakt->adresa}}</p>
-				<iframe  id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46035.04651157651!2d18.38392495!3d43.851881999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758cbb1ed719bd1%3A0x562ecda6de87b33e!2sSarajevo!5e0!3m2!1sen!2sba!4v1419167629278" frameborder="0"></iframe>
+				<iframe  id="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2876.8154150230826!2d18.427449199999998!3d43.8596544!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c8cf2e07439d%3A0x3079eddd48a51231!2sMula+Mustafe+Ba%C5%A1eskije%2C+Sarajevo%2C+Bosnia+and+Herzegovina!5e0!3m2!1sen!2s!4v1419350932563" frameborder="0"></iframe>
 			</div>
 		</div>
 	</div>
