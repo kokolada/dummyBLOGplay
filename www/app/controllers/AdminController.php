@@ -91,7 +91,7 @@ class AdminController extends BaseController {
 	}
 
 	public function BanerVeliki(){
-		$baner = DB::table('baneri')->where('tip', 1)->orderBy('id', 'desc')->pluck('slika');
+		$baner = DB::table('baneri')->where('tip', 1)->get();
 		return View::make('dash.velikibaner', compact('baner'));
 	}
 
@@ -102,6 +102,11 @@ class AdminController extends BaseController {
 		}
 
 		return $this->BanerVeliki();
+	}
+
+	public function BanerVelikiDelete($id){
+		DB::table('baneri')->where('id', $id)->delete();
+		return Redirect::route('banervelikidash');
 	}
 
 	public function BanerMali(){

@@ -120,6 +120,11 @@ Route::group(array('before' => 'auth'), function()
         'uses' => 'AdminController@BanerVelikiPOST'
     ));
 
+    Route::get('/dashboard/baner-veliki/{id}', array(
+        'as' => 'banervelikidelete',
+        'uses' => 'AdminController@BanerVelikiDelete'
+    ));
+
     Route::get('/dashboard/baner-mali', array(
     	'as' => 'banermalidash',
     	'uses' => 'AdminController@BanerMali'
