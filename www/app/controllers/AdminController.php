@@ -75,15 +75,13 @@ class AdminController extends BaseController {
 	}
 
 	public function oCdomCardPOST(){
-		if(substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
-			if(Input::file('slika')!=null){
+			if(Input::file('slika')!=null && substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
 				$url = Image::upload($_FILES['slika']);
 			}
 			else{
 				$url = Input::get('stariurl');
 			}
-			DB::table('ocdomcard')->insert(array('opis' => Input::get('ocdom'), 'slika' => $url));
-		}
+			DB::table('ocdomcard')->insert(['opis' => Input::get('ocdom'), 'slika' => $url]);
 
 		return $this->oCdomCard();
 	}
