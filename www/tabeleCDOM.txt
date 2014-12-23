@@ -61,7 +61,7 @@ create table kontakt(
 	slika varchar(100),
 	email varchar(30),
 	telefon varchar(30),
-	adresa varchar(30)
+	adresa varchar(100)
 )
 
 create table cdompdf(

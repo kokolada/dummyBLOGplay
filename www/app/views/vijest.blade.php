@@ -22,9 +22,7 @@
 		<div class="col-md-4">
 			<section name="3 reklame">
 			<ul class="reklame">
-				<!-- 
-				<li><a href="#"><img class="img-responsive reklame123" src="{{$home['reklame']['reklame2'][0]->slika}}"></a></li>
-				<li><a href="#"><img class="img-responsive reklame123" src="{{$home['reklame']['reklame3'][0]->slika}}"></a></li> -->
+				
 				@if(!isset($home['reklame']['reklame1'][0]))
 				<li><img class="img-responsive reklama123 razmak" src="http://placehold.it/750x250/ff00ff/fff&amp;text=reklama+pool+1" alt="reklama"></li>
 				@else
@@ -61,9 +59,9 @@
 	<div class="row razmak">
 		<div class="col-md-8">
 			<div class="vijesti">
-				<h2 class="razmak">{{$vijest->naslov}}</h2>
+				<h2 class="razmak" id="vijestLokacija">{{$vijest->naslov}}</h2>
 				<div class="col-md-8 razmak">
-					<a href="#"><img class="img-responsive" src="{{$vijest->slika}}"></a>
+					<img class="img-responsive" src="{{$vijest->slika}}">
 				</div>
 				<div class="infoVijest">
 					<p align="justify">{{$vijest->sadrzaj}}</p>

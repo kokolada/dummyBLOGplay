@@ -2,40 +2,36 @@
         <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
             <div class="carousel-inner" >
                 <div class="item active">
-                    <a href="#navijest">
-                        <img src="http://placehold.it/750x250/e8117f/fff&amp;text=Product+Main">
-                        <div class="textVijest">Danas u Sarajevu bilo svašta</div>
+                @if(isset($home['vijesti'][0]))
+                    <a href="{{route('vijest', $home['vijesti'][0]->id)}}">
+                        <img src="{{$home['vijesti'][0]->slika}}">
+                        <div class="textVijest">{{$home['vijesti'][0]->naslov}}</div>
                     </a>
+                @endif
                 </div>
-                <div class="item" data-interval="1000">
-                    <a href="#navijest">
-                        <img src="http://placehold.it/750x250/e8117f/fff&amp;text=Product+Main">
-                        <div class="textVijest">Danas u Sarajevu bilo svašta</div>
+                <div class="item" >
+                @if(isset($home['vijesti'][1]))
+                    <a href="{{route('vijest', $home['vijesti'][1]->id)}}">
+                        <img src="{{$home['vijesti'][1]->slika}}">
+                        <div class="textVijest">{{$home['vijesti'][1]->naslov}}</div>
                     </a>
+                @endif
                 </div>
                 <div class="item">
-                    <img src="http://placehold.it/750x250/ff00ff/fff&amp;text=Product+Image+3">
-                    <div class="textVijest">neki text</div>
+                @if(isset($home['vijesti'][2]))
+                <a href="{{route('vijest', $home['vijesti'][2]->id)}}">
+                    <img src="{{$home['vijesti'][2]->slika}}">
+                    <div class="textVijest">{{$home['vijesti'][2]->naslov}}</div>
+                    </a>
+                @endif
                 </div>
                 <div class="item">
-                    <img src="http://placehold.it/750x250/ffff00/000&amp;text=Product+Image+4">
-                    <div class="textVijest">neki text</div>
-                </div>
-                <div class="item">
-                    <img src="http://placehold.it/750x250/612b65/fff&amp;text=Product+Image+5">
-                    <div class="textVijest">neki text</div>
-                </div>
-                <div class="item">
-                    <img src="http://placehold.it/750x250/00ffff/000&amp;text=Product+Image+6">
-                    <div class="textVijest">neki text</div>
-                </div>
-                <div class="item">
-                    <img src="http://placehold.it/750x250/db371b/fff&amp;text=Product+Image+7">
-                    <div class="textVijest">neki text</div>
-                </div>
-                <div class="item">
-                    <img src="http://placehold.it/750x250/feb8aa/000&amp;text=Product+Image+8">
-                    <div class="textVijest">neki text</div>
+                @if(isset($home['vijesti'][3]))
+                <a href="{{route('vijest', $home['vijesti'][3]->id)}}">
+                    <img src="{{$home['vijesti'][3]->slika}}">
+                    <div class="textVijest">{{$home['vijesti'][3]->naslov}}</div>
+                    </a>
+                @endif
                 </div>
             </div>
         </div> 
@@ -43,24 +39,20 @@
         <div id="thumbcarousel" class="carousel slide" data-interval="false">
             <div class="carousel-inner">
                 <div class="item active">
-                    <div data-target="#carousel" data-slide-to="0" class="thumb"><img src="http://placehold.it/400/e8117f/fff&amp;text=Product+Main"></div>
-                    <div data-target="#carousel" data-slide-to="1" class="thumb"><img src="http://placehold.it/400/66C3FF/000&amp;text=Product+Image+2"></div>
-                    <div data-target="#carousel" data-slide-to="2" class="thumb"><img src="http://placehold.it/400/ff00ff/fff&amp;text=Product+Image+3"></div>
-                    <div data-target="#carousel" data-slide-to="3" class="thumb"><img src="http://placehold.it/400/ffff00/000&amp;text=Product+Image+4"></div>
-                </div><!-- /item -->
-                <div class="item">
-                    <div data-target="#carousel" data-slide-to="4" class="thumb"><img src="http://placehold.it/400/612b65/fff&amp;text=Product+Image+5"></div>
-                    <div data-target="#carousel" data-slide-to="5" class="thumb"><img src="http://placehold.it/400/00ffcc/000&amp;text=Product+Image+6"></div>
-                    <div data-target="#carousel" data-slide-to="6" class="thumb"><img src="http://placehold.it/400/db371b/fff&amp;text=Product+Image+7"></div>
-                    <div data-target="#carousel" data-slide-to="7" class="thumb"><img src="http://placehold.it/400/feb8aa/000&amp;text=Product+Image+8"></div>
+                @if(isset($home['vijesti'][0]))
+                    <div data-target="#carousel" data-slide-to="0" class="thumb"><img src="{{$home['vijesti'][0]->slika}}"></div>
+                    @endif
+                    @if(isset($home['vijesti'][1]))
+                    <div data-target="#carousel" data-slide-to="1" class="thumb"><img src="{{$home['vijesti'][1]->slika}}"></div>
+                    @endif
+                    @if(isset($home['vijesti'][2]))
+                    <div data-target="#carousel" data-slide-to="2" class="thumb"><img src="{{$home['vijesti'][2]->slika}}"></div>
+                    @endif
+                    @if(isset($home['vijesti'][3]))
+                    <div data-target="#carousel" data-slide-to="3" class="thumb"><img src="{{$home['vijesti'][3]->slika}}"></div>
+                    @endif
                 </div><!-- /item -->
             </div><!-- /carousel-inner -->
-            <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
         </div> <!-- /thumbcarousel -->
     </div><!-- /clearfix -->
  

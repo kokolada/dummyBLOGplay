@@ -8,9 +8,15 @@ class AdminController extends BaseController {
 	}
 
 	public function DashboardPOST(){
-		if(substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
 			Input::file('slika')!=null ? $url = Image::upload($_FILES['slika']) : $url = null;
-		
+			if($url == null){
+			Vijest::create(array(
+				'naslov' => Input::get('naslov'),
+				'sadrzaj' => Input::get('textarea'),
+				'korisnik_id' => Auth::user()->id
+			));
+		}
+		else{
 			Vijest::create(array(
 				'naslov' => Input::get('naslov'),
 				'sadrzaj' => Input::get('textarea'),
@@ -23,7 +29,7 @@ class AdminController extends BaseController {
 	}
 
 	public function Vijesti(){
-		$vijesti = Vijest::all();
+		$vijesti = Vijest::orderBy('id', 'desc')->get();
 		return View::make('dash.vijesti', compact('vijesti'));
 	}
 
@@ -38,10 +44,9 @@ class AdminController extends BaseController {
 	}
 
 	public function VijestiEditPOST($id){
-		if(substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
 			$vijest = Vijest::find($id);	
 
-			if(Input::file('slika')!=null){
+			if(Input::file('slika')!=null && substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
 				$url = Image::upload($_FILES['slika']);
 				$vijest->slika = $url;
 			}
@@ -50,7 +55,6 @@ class AdminController extends BaseController {
 			$vijest->sadrzaj = Input::get('sadrzaj');
 
 			$vijest->save();
-		}
 
 		return Redirect::route('vijestidash');
 	}
