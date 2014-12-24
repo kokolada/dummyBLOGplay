@@ -7,8 +7,8 @@
 @endif
 	<div class="row razmak">
 		<div class="col-md-12" >
-			<!-- <img class="img-responsive imageBanner oblik velikiBanner" src="{{$home['banerv']}}"> -->
-			@include('Home/CarouselBanner')
+			<img class="img-responsive imageBanner oblik velikiBanner" src="{{$home['banerv']}}">
+			<!-- @include('Home/CarouselBanner') -->
 		</div>
 	</div>
 

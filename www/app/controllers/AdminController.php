@@ -164,6 +164,9 @@ class AdminController extends BaseController {
 	public function PartneriPOST(){
 		if(substr(Input::file('slika')->getMimeType(),0,5) == 'image'){
 			$url = Image::upload($_FILES['slika']);
+		}
+		else{
+			$url = null;
 			DB::table('partneri')->insert(array(
 				'naziv' => Input::get('naziv'),
 				'sajt' => Input::get('sajt'),

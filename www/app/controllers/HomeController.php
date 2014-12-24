@@ -31,7 +31,7 @@ class HomeController extends BaseController {
 		$reklame2 = DB::table('reklame')->where('broj', 2)->get();
 		$reklame3 = DB::table('reklame')->where('broj', 3)->get();
 		$reklame = array('reklame1' => $reklame1, 'reklame2' => $reklame2, 'reklame3' => $reklame3);
-		$vijesti = Vijest::all();
+		$vijesti = Vijest::orderBy('id', 'desc')->get();
 		$home = array(
 			'banerv' => $banerv,
 			'banerm' => $banerm,
