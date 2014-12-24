@@ -57,7 +57,7 @@ a:hover {
 
 
 #navigacija .active a, #navigacija a:hover {
-	background-color: white;
+	background-color: #F7F7F2;
 	color: #66C3FF;
 }
 
@@ -157,6 +157,14 @@ a:hover {
 #skraceniText{
 	font-size: 12px;
 }
+
+.oblik{
+	border-radius: 2px;
+}
+.obliknav{
+	border-radius: 2px 2px 0px 0px;
+}
+
 
 /* HOME -> CAROUSEL  */
 

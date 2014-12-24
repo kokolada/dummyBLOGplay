@@ -20,8 +20,8 @@ $(document).ready(function(){
     
 });
 
-/* copy loaded thumbnails into carousel */
-jQuery(function ($) {
+// panel collapse
+$(function ($) {
         $('.panel-heading span.clickable').on("click", function (e) {
             if ($(this).hasClass('panel-collapsed')) {
               // expand the panel

@@ -9,7 +9,7 @@
 		<div class="col-md-12" >
 			<a href="#">
 			<!-- <img class="img-responsive imageBanner" src="http://placehold.it/780x140/612b65/fff&amp;text=Partner+1"> -->
-			<img class="img-responsive imageBanner velikiBanner" src="{{$home['banerv']}}">
+			<img class="img-responsive imageBanner oblik velikiBanner" src="{{$home['banerv']}}">
 			</a>
 		</div>
 	</div>
@@ -47,7 +47,7 @@
 	<div class="row razmak">
 		<div class="col-md-8">
 			<section name="banner">
-				<a href="#"><img class="img-responsive imageBanner maliBanner" src="{{$home['banerm']}}"></a>
+				<a href="#"><img class="img-responsive imageBanner oblik maliBanner" src="{{$home['banerm']}}"></a>
 			</section>
 		</div>
 		<div class="col-md-4">
@@ -57,7 +57,7 @@
 
 
 	<div class="row razmak">
-		<div class="col-md-8" id="poljeZaVijesti">
+		<div class="col-md-8 oblik" id="poljeZaVijesti">
 
 		@foreach($home['vijesti'] as $v)
 			<div class="vijesti razmakVijesti col-md-12">
