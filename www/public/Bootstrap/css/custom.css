@@ -113,10 +113,12 @@ a:hover {
 
 #poljeZaVijesti {
 	background-color: white;
+	padding-top: 12px;
 }
 
 .vijesti {
 	padding: 10px;
+	background-color: white;
 }
 
 #linija {

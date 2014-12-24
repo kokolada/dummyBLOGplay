@@ -7,10 +7,8 @@
 @endif
 	<div class="row razmak">
 		<div class="col-md-12" >
-			<a href="#">
-			<!-- <img class="img-responsive imageBanner" src="http://placehold.it/780x140/612b65/fff&amp;text=Partner+1"> -->
-			<img class="img-responsive imageBanner oblik velikiBanner" src="{{$home['banerv']}}">
-			</a>
+			<!-- <img class="img-responsive imageBanner oblik velikiBanner" src="{{$home['banerv']}}"> -->
+			@include('Home/CarouselBanner')
 		</div>
 	</div>
 
