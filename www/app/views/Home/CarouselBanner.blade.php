@@ -1,7 +1,7 @@
 
         <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="16000">
             <div class="carousel-inner">
-                @foreach($home['reklame']['reklame1'] as $i => $r3)
+                @foreach($home['banerv'] as $i => $r3)
                 @if($i==0)
                 <div class="item active">
                 @else

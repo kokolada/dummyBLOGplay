@@ -167,6 +167,7 @@ class AdminController extends BaseController {
 		}
 		else{
 			$url = null;
+		}
 			DB::table('partneri')->insert(array(
 				'naziv' => Input::get('naziv'),
 				'sajt' => Input::get('sajt'),
@@ -174,7 +175,7 @@ class AdminController extends BaseController {
 				'opartneru' => Input::get('opartneru'),
 				'grupa' => Input::get('kategorija')
 			));	
-		}
+			
 		return $this->Partneri();
 	}
 

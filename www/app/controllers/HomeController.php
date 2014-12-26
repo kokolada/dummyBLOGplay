@@ -3,7 +3,7 @@
 class HomeController extends BaseController {
 
 	public function Home(){
-		$banerv = DB::table('baneri')->where('tip', 1)->orderBy('id', 'desc')->pluck('slika');
+		$banerv = DB::table('baneri')->where('tip', 1)->orderBy('id', 'desc')->get();
 		$banerm = DB::table('baneri')->where('tip', 2)->orderBy('id', 'desc')->pluck('slika');
 		$logo = DB::table('logo')->orderBy('id', 'desc')->pluck('link');
 		$reklame1 = DB::table('reklame')->where('broj', 1)->get();
