@@ -10,6 +10,7 @@
     </div>
 	<div class="form-group form-group-sm">
         <label for="slika">Dodaj sliku:</label>
+        <span> <small>(Preporuka: 740x250)</small></span>
         <br>
         <input required type="file" id="slika" name="slika" class="btn btn-default btn-sm" value="Dodaj sliku">
     </div>

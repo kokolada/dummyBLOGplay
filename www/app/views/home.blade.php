@@ -2,9 +2,15 @@
 
 @section('content')
 <div class="container" name="pocetna">
-@if(isset($info))
-	<div class="alert alert-success">{{$info}}</div>
-@endif
+
+	<div class="row">
+		<div class="col-md-12">
+				@if(isset($info))
+					<div class="alert alert-success">{{$info}}</div>
+				@endif
+		</div>
+	</div>
+	
 	<div class="row razmak">
 		<div class="col-md-12" >
 			@include('Home/CarouselBanner')

@@ -11,7 +11,8 @@
 		
 		{{Form::open(array('files' => true))}}
 			<div id="izmjenaLoga">
-				{{Form::label('slika', 'Promijeni baner 2:')}}
+				{{Form::label('slika', 'Promijeni mali baner:')}}
+				<span> <small>(Preporuka: 740x180)</small></span>
 				{{Form::file('slika', ['class' => 'btn btn-default btn-sm', 'required' => 'required'])}}
 				<hr>
 				{{Form::submit('Sačuvaj', ['class' => 'btn btn-primary pull-right'])}}

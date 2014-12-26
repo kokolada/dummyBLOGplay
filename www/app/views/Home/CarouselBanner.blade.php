@@ -7,7 +7,7 @@
                 @else
                 <div class="item">
                 @endif
-                    <img class="img-responsive oblik reklame123" src="{{$r3->slika}}">
+                    <img class="img-responsive velikiBanner oblik reklame123" src="{{$r3->slika}}">
                 </div>
                 @endforeach
             </div>

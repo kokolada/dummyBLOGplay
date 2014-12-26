@@ -20,6 +20,7 @@
 		{{Form::textarea('sadrzaj', null, ['class' => 'form-control'])}}
 
 		{{Form::label('slika', 'Slika:')}}
+		<span> <small>(Preporuka: 740x250)</small></span>
 		{{Form::file('slika',['class' => 'btn btn-default btn-sm'])}}
 		<hr>
 		{{Form::submit('Sačuvaj',['class' => 'btn btn-primary pull-right'])}}

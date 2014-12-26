@@ -64,6 +64,7 @@
 			</div>
 			<div class="panel-body">
 				{{Form::label('slika', 'Slika:')}}
+				<span> <small>(Preporuka: 340x120)</small></span>
 				{{Form::file('slika',['class' => 'btn btn-default btn-sm','required' => 'required'])}} <br>
 				<div class="col-md-6" id="noPadd">
 					{{Form::label('kategorija', 'Kategorija:')}}		

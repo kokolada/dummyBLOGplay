@@ -1,5 +1,5 @@
 
-        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="11000">
             <div class="carousel-inner">
                 @foreach($home['reklame']['reklame3'] as $i => $r3)
                 @if($i==0)

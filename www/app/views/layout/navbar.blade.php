@@ -12,9 +12,11 @@ if(!Session::has('logo'))
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{route('dashboard')}}">
+                <a class="navbar-brand" href="{{route('home')}}">
                     <img class="img-responsive" src="{{Session::get('logo')}}" alt="">
                 </a>
+                <h2 class="pull-right" id="naslov-cdom">CDOM CARD</h2>
+
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
