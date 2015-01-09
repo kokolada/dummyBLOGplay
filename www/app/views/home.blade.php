@@ -3,7 +3,7 @@
 @section('content')
 <div class="container" name="pocetna">
 
-	<div class="row">
+	<div class="row" style="display:none;">
 		<div class="col-md-12">
 				@if(isset($info))
 					<div class="alert alert-success">{{$info}}</div>

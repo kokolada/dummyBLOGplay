@@ -1,5 +1,5 @@
 
-        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="16000">
+        <div class="carousel slide" data-ride="carousel" data-interval="16000">
             <div class="carousel-inner">
                 @foreach($home['banerv'] as $i => $r3)
                 @if($i==0)
@@ -7,7 +7,7 @@
                 @else
                 <div class="item">
                 @endif
-                    <img class="img-responsive velikiBanner oblik reklame123" src="{{$r3->slika}}">
+                    <img class="img-responsive velikiBanner oblik" src="{{$r3->slika}}">
                 </div>
                 @endforeach
             </div>

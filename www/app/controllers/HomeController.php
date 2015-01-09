@@ -87,7 +87,7 @@ class HomeController extends BaseController {
 			),
 			function($message){
 				$message->from('cdom.prijave@cdom.ba', 'CDOMPrijave');
-    			$message->to('hilmija.arnautovic@gmail.com', 'CDOM')->subject('CDOM prijava');
+    			$message->to('hilmija.arnautovic@cdomcard.com', 'CDOM')->subject('CDOM prijava');
 		});
 		return Redirect::route('home')->with('info', 'Vaša prijava je uspješno poslana.');
 	}

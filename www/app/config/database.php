@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'cdom',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => '178.209.2.158',
+			'database'  => 'cdomcard_main',
+			'username'  => 'cdomcard_user',
+			'password'  => 'hilmo123',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
