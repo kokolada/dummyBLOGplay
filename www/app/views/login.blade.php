@@ -1,23 +1,11 @@
-<link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap-theme.css">
-<link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="/Bootstrap/css/custom.css">
-<html>
-<head>
-	<title>Login u CDOM</title>
-</head>
-<body id="logCont">
-	<div class="container">
-		<div class="col-md-6" id="login">
+@extends('layout.master')
 
-			<h1>CDOM Dashboard</h1>
-			{{ Form::open() }}
-				<br>	
-					<label for="password">Password:</label> 
-					<input class="form-control input-lg" type="password" name="password"> <br>
-				<input class="btn pull-right btn-lg loginButton" type="submit" value="Login"> <br>
-			{{ Form::close() }} 
-
-		</div>
-	</div>
-</body>
-</html>
+@section('content')
+{{Form::open()}}
+	<div style="height: 40em;" class="row">
+      <div>
+        <input style="margin-top: 30%;" autofocus name="c" type="text">
+      </div>
+    </div>
+{{Form::close()}}
+@stop

@@ -17,7 +17,6 @@ ClassLoader::addDirectories(array(
 	app_path().'/controllers',
 	app_path().'/models',
 	app_path().'/database/seeds',
-	app_path().'/helpers',
 
 ));
 
@@ -46,11 +45,6 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 | shown, which includes a detailed stack trace during debug.
 |
 */
-
-App::missing(function($exception)
-{
-    return Response::view('errors.missing', array(), 404);
-});
 
 App::error(function(Exception $exception, $code)
 {

@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '178.209.2.158',
-			'database'  => 'cdomcard_main',
-			'username'  => 'cdomcard_user',
-			'password'  => 'hilmo123',
+			'host'      => 'localhost',
+			'database'  => 'blogTonka',
+			'username'  => 'root',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
