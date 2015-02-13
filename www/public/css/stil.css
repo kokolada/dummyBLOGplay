@@ -1,8 +1,13 @@
-a{
-	color: #90caf9;
-}
 *{
 	font-family: 'Open Sans', sans-serif;
+}
+/*body{
+	background-color: #292922;
+	color:#fafafa!important;
+}*/
+body{
+	/*background-color: #fafafa; */
+	background-color: white;
 }
 p{
 	font-size: 1.1em;
@@ -25,16 +30,6 @@ h1 a{
 }
 h1 a:hover{
 	color:gray;
-}
-/*body{
-	background-color: #292922;
-	color:#fafafa!important;
-}*/
-body{
-	background-color: #fafafa;
-}
-ul li ul li{
-	margin-left: 1em!important;
 }
 #blogsidebartext a{
 	color:#00796b;
@@ -60,12 +55,6 @@ ul li ul li{
 	color:#e65100;
 }
 
-textarea{
-	resize:none;
-}
-.no-margin-bottom{
-	margin-bottom: 5px;
-}
 blockquote{
 	border-left: 6px solid lightgray;
 	padding-left: 4%;
@@ -111,4 +100,16 @@ blockquote{
 			padding-top:0;
 			height: 275px;
 		}
+		#my_textarea {
+			border:none;
+		}
+		
+		.no-margin-bottom{
+	margin-bottom: 5px;
+}
+
+textarea{
+	resize:none;
+}
+
 /* MELTDOWN STILOVI */

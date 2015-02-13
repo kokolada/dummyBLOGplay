@@ -8,39 +8,36 @@
     <meta name="description" content="tonkaBlog - progress.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	{{HTML::style('css/stil.css')}}
 	{{HTML::style('css/normalize.css')}}
 	{{HTML::style('css/skeleton.css')}}
+	{{HTML::style('css/stil.css')}}
 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 	<div class="container">
-	@if(Auth::check())
-		<div class="row">
-			<a href="{{route('logout')}}" class="button">logout</a>
-			<a href="{{route('adminPanel')}}" class="button button-primary">admin home</a>
-			<a href="{{route('blog')}}" class="button">home</a>
-		</div>
-	@else
-		<div class="row">
-			<div class="seven columns">
-				<h1 style="font-weight: 600;" >Tonka Bl<a href="{{route('admin')}}" class="teal-text">o</a>g</h1>
+		@if(Auth::check())
+			<div class="row">
+				<a href="{{route('logout')}}" class="button">logout</a>
+				<a href="{{route('adminPanel')}}" class="button button-primary">admin home</a>
+				<a href="{{route('blog')}}" class="button">home</a>
 			</div>
-			<div class="five columns">
-				<div class="eleven columns">
-					<h2></h2>
-        			<input id="search" type="text" class="twelwe columns" placeholder="search for a title">
-      			</div>
+		@else
+			@include('components.header')
+		@endif
+		<div class="row">
+			<div class="three columns sidebar">
+				@include('components.sidebar')
+			</div>
+			<div class="nine columns">
+				@yield('content')
 			</div>
 		</div>
-	@endif
-		@yield('content')
 	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	@yield('adminContent')
+	{{HTML::script('/js/jquery.collapse.js')}}
 	
 </body>
 </html>

@@ -2,29 +2,32 @@
 
 class HomeController extends BaseController {
 
-	public function adminGET(){
-		return View::make('login');
-	}
-
-	public function adminPOST(){
-		if(Auth::attempt(['username' => 'admin', 'password' => Input::get('c')]))
-			return Redirect::route('adminPanel');
-	}
-
-	public function homeGET(){
+	public function home(){
 		return Redirect::route('blog');
 	}
 	
-	public function blogGET(){
-		$clanci = BlogPost::orderBy('id', 'desc')->get();
-		return View::make('blog',  compact('clanci'));
+	public function blog(){
+		$posts = Post::where('type', '1')->orderBy('id', 'desc')->get();
+		return View::make('blog', compact('posts'));
 	}
 
-	public function journalGET(){
-		return View::make('journal');
+	public function journal(){
+		$posts = Post::where('type', '0')->orderBy('id', 'desc')->get();
+		return View::make('journal', compact('posts'));
 	}
 
-	public function aboutGET(){
-		return View::make('about');
+	public function both(){
+		$posts = Post::orderBy('id', 'desc')->get();
+		return View::make('blog', compact('posts'));
+	}
+
+	public function about(){
+		$post = DB::table('aboutme')->first();
+		return View::make('about', compact('post'));
+	}
+
+	public function books(){
+		//	#to implement
+		return Redirect::route('blog');
 	}
 }

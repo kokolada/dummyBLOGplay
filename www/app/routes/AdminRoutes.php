@@ -1,26 +1,12 @@
-<?php 
-
-Route::get('/', array(
-	'as' => 'home',
-	'uses' => 'HomeController@homeGET'
-));
-
-Route::get('/journal', array(
-	'as' => 'journal',
-	'uses' => 'HomeController@journalGET'
-));
-
-Route::get('/about', array(
-	'as' => 'about',
-	'uses' => 'HomeController@aboutGET'
-));
+<?php
 
 Route::get('/c', array(
 	'as' => 'admin',
-	'uses' => 'HomeController@adminGET'
+	'uses' => 'AdminController@adminGET'
 ))->before('guest');
+
 Route::post('/c', array(
-	'uses' => 'HomeController@adminPOST'
+	'uses' => 'AdminController@adminPOST'
 ));
 
 Route::get('/cp', array(

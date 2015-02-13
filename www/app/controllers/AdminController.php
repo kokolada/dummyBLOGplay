@@ -2,6 +2,15 @@
 
 class AdminController extends BaseController {
 
+	public function adminGET(){
+		return View::make('login');
+	}
+
+	public function adminPOST(){
+		if(Auth::attempt(['username' => 'admin', 'password' => Input::get('c')]))
+			return Redirect::route('adminPanel');
+	}
+
 	public function homeGET(){
 		$clanci = BlogPost::select('id', 'title')->get();
 		return View::make('admin.apanelHome', compact('clanci'));

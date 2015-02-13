@@ -140,7 +140,7 @@ you can use the generic selector below, but it's slower:
 	border-radius: 3px;
 }
 .meltdown_editor-deco.focus {
-	border-color: #5c8cd0;
+	border-color: none;
 }
 
 .meltdown_editor {

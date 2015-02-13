@@ -2,9 +2,6 @@
 
 @section('content')
 
-<div class="row">
-	@include('sidebar.sidebar')
-    @include('mainbar.mainbar')
-</div>
+@include('components.postList')
 
 @stop
