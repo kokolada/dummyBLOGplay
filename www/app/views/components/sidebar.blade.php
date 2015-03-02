@@ -1,4 +1,4 @@
-<h1>LINKS</h1>
+<div id="sidebarstil"><span class="sidebartitle">LINKS</span>
 <ul class="link-list">
 	<li><a href="{{route('blog')}}">Blog</a></li>
 	<li><a href="{{route('journal')}}">Journal</a></li>
@@ -6,14 +6,15 @@
 	<li><a href="{{route('about')}}">About Me</a></li>
     <li><a href="{{route('books')}}">BooksToRead</a></li>
 </ul>
-
-<h1>ARCHIVE</h1>
+<br>
+<span class="sidebartitle">ARCHIVE</span>
 <ul class="archive">
-    <li><a href="#">2015 February</a></li>
-    <li><a href="#">2015 January</a></li>
-    <li><a href="#">2014 December</a></li>
-    <li><a href="#">2014 November</a></li>
+    <li><a href="#">February 2015</a></li>
+    <li><a href="#">January 2015</a></li>
+    <li><a href="#">December 2014</a></li>
+    <li><a href="#">November 2014</a></li>
 </ul>
+</div>
 
 <!-- <div id="default-example">
         @if(isset($mjeseci))

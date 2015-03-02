@@ -1,7 +1,9 @@
 <div class="row">
-
-	<div class="seven columns">
-		<h1 style="font-weight: 600;" >Tonka Bl<a href="{{route('admin')}}" class="teal-text">o</a>g</h1>
+	<div class="two columns">
+		<pre> </pre>
+	</div>
+	<div class="five columns">
+		<a href="{{route('admin')}}">admin login</a>
 	</div>
 
 	<div class="five columns">

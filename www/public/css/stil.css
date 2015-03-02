@@ -7,7 +7,6 @@
 }*/
 body{
 	/*background-color: #fafafa; */
-	background-color: white;
 }
 p{
 	font-size: 1.1em;
@@ -62,7 +61,41 @@ blockquote{
 	margin-left: 0.5%;
 }
 
+/*#sidebarstil{
+	border-radius: 70px;
+	padding: 30px;
+	background-color: #303F9F;
+	color:white;
+}
+#sidebarstil a{
+	color: white;
+}*/
+.container{
+	float:left;
+}
+@media (min-width: 750px){
+	.container{
+		margin-left: 120px;
+	}
+}
 
+.topC{
+
+}
+.leftC{
+	padding: 15px;
+	border-right: 1px solid lightgray;
+	text-align: right;
+	padding-right: 20px;
+}
+.rightC{
+	background-color: white;
+	margin-top: 16px;
+}
+
+.sidebartitle{
+	font-size: 1.5em;
+}
 
 /* MELTDOWN STILOVI */
 .meltdown_wrap{

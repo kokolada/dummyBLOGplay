@@ -15,7 +15,7 @@
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel='stylesheet' type='text/css'>
 </head>
 <body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<div class="container">
 		@if(Auth::check())
 			<div class="row">
@@ -23,21 +23,15 @@
 				<a href="{{route('adminPanel')}}" class="button button-primary">admin home</a>
 				<a href="{{route('blog')}}" class="button">home</a>
 			</div>
-		@else
-			@include('components.header')
 		@endif
+	</div>
+	<div class="">
 		<div class="row">
-			<div class="three columns sidebar leftC">
-				@include('components.sidebar')
-			</div>
-			<div class="nine columns rightC">
+			<div class="twelwe columns">
 				@yield('content')
 			</div>
 		</div>
 	</div>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	{{HTML::script('/js/jquery.collapse.js')}}
 	
 </body>
 </html>

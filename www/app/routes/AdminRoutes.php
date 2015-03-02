@@ -18,21 +18,54 @@ Route::post('/cp', array(
 	'uses' => 'AdminController@homePOST'
 ));
 
-Route::get('/write', array(
-	'as' => 'writePost',
-	'uses' => 'AdminController@writeGET'
+//POST COMMANDS // WRITE BLOG; JOURNAL; EDIT ABOUT ME; BOOKSTOREAD
+
+//WRITE BLOG
+Route::get('/write/blog-post', array(
+	'as' => 'writeBlogPost',
+	'uses' => 'AdminController@writeBlogPost'
 ))->before('auth');
 
-Route::post('/write', array(
-	'uses' => 'AdminController@writePOST'
+Route::post('/write/blog-post', array(
+	'uses' => 'AdminController@handleBlogPost'
 ));
+
+//WRITE JOURNAL
+Route::get('/write/journal-post', array(
+	'as' => 'writeJournalPost',
+	'uses' => 'AdminController@writeJournalPost'
+))->before('auth');
+
+Route::post('/write/journal-post', array(
+	'uses' => 'AdminController@submitJournalPost'
+));
+
+//EDIT ABOUT ME
+Route::get('/about-me/edit',array(
+	'as' => 'editAboutMe',
+	'uses' => 'AdminController@editAboutMe'
+));
+
+Route::post('/about-me/edit',array(
+	'uses' => 'AdminController@submitAboutMe'
+));
+
+//EDIT BOOKSTOREAD
+//--IMPLEMENT HERE
+
+//OVAJ EDIT REFACTORAT
+Route::get('/edit/{id}', array(
+	'as' => 'edit',
+	'uses' => 'AdminController@editClanak'
+))->before('auth');
+
+Route::get('/delete/{id}', array(
+	'as' => 'delete',
+	'uses' => 'AdminController@deleteClanak'
+))->before('auth');
+
 
 Route::get('/logout', array(
 	'as' => 'logout',
 	'uses' => 'AdminController@logout'
-))->before('auth');
-
-Route::get('/edit/{id}', array(
-	'as' => 'edit',
-	'uses' => 'AdminController@editClanak'
 ))->before('auth');
