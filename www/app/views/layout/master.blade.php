@@ -13,6 +13,7 @@
 	{{HTML::style('css/stil.css')}}
 
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -23,14 +24,16 @@
 				<a href="{{route('adminPanel')}}" class="button button-primary">admin home</a>
 				<a href="{{route('blog')}}" class="button">home</a>
 			</div>
-		@else
-			@include('components.header')
 		@endif
-		<div class="row">
-			<div class="three columns sidebar leftC">
+
+		@include('components.header') 					<!-- row -->
+
+		<div class="row"> 								<!-- row -->
+			<div class="two columns">
 				@include('components.sidebar')
 			</div>
-			<div class="nine columns rightC">
+
+			<div class="ten columns">
 				@yield('content')
 			</div>
 		</div>

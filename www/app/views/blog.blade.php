@@ -2,6 +2,6 @@
 
 @section('content')
 
-@include('components.postList')
+@include('components.postlist')
 
 @stop

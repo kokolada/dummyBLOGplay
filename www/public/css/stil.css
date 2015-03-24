@@ -1,16 +1,102 @@
 *{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto Slab', serif;
 }
-/*body{
-	background-color: #292922;
-	color:#fafafa!important;
-}*/
 body{
-	/*background-color: #fafafa; */
+	background-color: #f6f6f6;
 }
 p{
 	font-size: 1.1em;
 }
+.active{
+	border: 2px solid #008d8d;
+}
+#search{
+	border-radius: 0px!important;
+	border:1px solid #ebebeb!important;
+	float:right;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.main-header{
+	background-color: #4A148C;
+	background-size: 100%;
+	background-image: url("http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-113377.jpg");
+	height: 200px;
+	margin: 0% 0%;
+}
+#header-text{
+	font-size: 4em;
+	font-weight: 700;
+	margin-left: 20px;
+	display: inline-block;
+	margin-top: 90px;
+	color:black;
+}
+#blog-switch{
+	color:white;
+	width: 100%;
+	background-color: #3599dc;
+	padding: 5px 0px;
+	float:left;
+	margin-bottom: 10px;
+}
+#blog-switch ol{
+	display:inline;
+}
+#blog-switch ol a{
+	color:white;
+}
+#blog-switch ol li{
+	display: inline;
+	float:left;
+	border-radius: 4px;
+	text-align: center;
+	padding:5px;
+	margin: 0;
+	margin-left: 2%;
+	background-color: #3f9cda;
+}
+#blog-switch ul{
+	margin-right: 20px!important;
+	float: right;
+	background-color: #3f9cda;
+	border-radius: 4px;
+}
+#blog-switch ul li{
+	text-align: center;
+	display: inline-block;
+	float:left;
+	padding: 5px 10px!important;
+}
+#blog-switch ul li:first-child{
+	background-color: teal;
+	border-radius: 4px 0px 0px 4px;
+	border-right: 0px;
+}
+#blog-switch ul li:last-child{
+	border-radius: 0px 4px 4px 0px;
+	border-left: 0px;
+}
+#avatar{
+	width: 100%;
+	margin-top: 24px;
+}
+#avatar img{
+	border:1px solid lightgray;
+	width: 100%;
+	border-radius: 2px;
+	height: 150px;
+}
+#about-me-text{
+	font-family: arial;
+	border:1px solid lightgray;
+	width: 100%;
+	color:white;
+	border-radius: 4px;
+	background-color: #009688;
+}
+
 ul{
 	list-style-type:none!important;
 	padding:0!important;
@@ -23,29 +109,6 @@ ul li{
 ul li a{
 	text-decoration: none;
 }
-h1 a{
-	text-decoration: none;
-	color:black;
-}
-h1 a:hover{
-	color:gray;
-}
-#blogsidebartext a{
-	color:#00796b;
-}
-#journalsidebartext a{
-	color:#e65100;
-}
-#bothsidebartext a{
-	color:#795548;
-}
-#aboutsidebartext a{
-	color:#9c27b0;
-}
-#blogsidebartext, #journalsidebartext, #bothsidebartext, #aboutsidebartext{
-	font-weight: 600;
-	font-size: 1.2em;
-}
 
 .archive li a{
 	color:#795548;
@@ -54,50 +117,73 @@ h1 a:hover{
 	color:#e65100;
 }
 
+.post-title{
+	text-align: left;
+	margin-bottom: -10px;
+	margin-top: -10px;
+	clear:both;
+}
+.post-title a{
+	text-decoration: none;
+	color:black;
+}
+.post-meta{
+	margin-top: -24px;
+	margin-right: 5px;
+	margin-left: 3px;
+	font-style: italic;
+	float:right;
+	color:lightgray;
+}
+.breaker{
+	margin: 10px 0 20px 0;
+	clear:both;
+	width: 80%;
+}
+.sidebartitle{
+	font-size: 1.5em;
+}
+.post{
+	border:1px solid #ebebeb;
+	background-color: white;
+	padding: 4%;
+}
+.leftC{
+	text-align: right;
+}
+.leftC li{
+	color:black;
+	font-weight: 600;
+}
+.leftC a{
+	text-decoration: none;
+}
+
+@media (min-width: 750px){
+	.rightC{
+		padding: 4.1%;
+	}
+}
+@media (max-width: 550px){
+	.container{
+		width: 100%!important;
+		padding: 0;
+	}
+	.rightC{
+		padding: 4.1%;
+	}
+}
+
+/** CSS FORSURE STO OSTAJE */
 blockquote{
 	border-left: 6px solid lightgray;
 	padding-left: 4%;
 	border-radius: 1px;
 	margin-left: 0.5%;
 }
+/* CSS FORSURE STO OSTAJE **/
 
-/*#sidebarstil{
-	border-radius: 70px;
-	padding: 30px;
-	background-color: #303F9F;
-	color:white;
-}
-#sidebarstil a{
-	color: white;
-}*/
-.container{
-	float:left;
-}
-@media (min-width: 750px){
-	.container{
-		margin-left: 120px;
-	}
-}
-
-.topC{
-
-}
-.leftC{
-	padding: 15px;
-	border-right: 1px solid lightgray;
-	text-align: right;
-	padding-right: 20px;
-}
-.rightC{
-	background-color: white;
-	margin-top: 16px;
-}
-
-.sidebartitle{
-	font-size: 1.5em;
-}
-
-/* MELTDOWN STILOVI */
+/** MELTDOWN STILOVI */
 .meltdown_wrap{
 			width: 100%!important;
 			margin:0!important;
@@ -145,4 +231,4 @@ textarea{
 	resize:none;
 }
 
-/* MELTDOWN STILOVI */
+/* MELTDOWN STILOVI **/

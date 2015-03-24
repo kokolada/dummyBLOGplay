@@ -1,19 +1,11 @@
-<div id="sidebarstil"><span class="sidebartitle">LINKS</span>
-<ul class="link-list">
-	<li><a href="{{route('blog')}}">Blog</a></li>
-	<li><a href="{{route('journal')}}">Journal</a></li>
-	<li><a href="{{route('both')}}">both</a></li>
-	<li><a href="{{route('about')}}">About Me</a></li>
-    <li><a href="{{route('books')}}">BooksToRead</a></li>
-</ul>
-<br>
-<span class="sidebartitle">ARCHIVE</span>
-<ul class="archive">
-    <li><a href="#">February 2015</a></li>
-    <li><a href="#">January 2015</a></li>
-    <li><a href="#">December 2014</a></li>
-    <li><a href="#">November 2014</a></li>
-</ul>
+<div class="leftC">
+    <span class="sidebartitle">ARCHIVE</span>
+    <ul class="archive">
+        <li><a href="#">February 2015</a></li>
+        <li><a href="#">January 2015</a></li>
+        <li><a href="#">December 2014</a></li>
+        <li><a href="#">November 2014</a></li>
+    </ul>
 </div>
 
 <!-- <div id="default-example">
