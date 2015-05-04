@@ -1,0 +1,120 @@
+*{
+	font-family: 'Open Sans',sans-serif;
+}
+body{
+	font-family: 'Open Sans',sans-serif;
+	font-size: 14px;
+	color: #4a4a4a;
+	background: #f3f3f3;
+}
+/*
+indigo : #658db5;
+*/
+.container{
+	max-width: 100%;
+	background-color: white;
+	width: 95%;
+	margin-top: 20%;
+	padding: 4% 5%;
+}
+p{
+	font-size: 1.25em;
+}
+.post img{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  	box-sizing: border-box;
+}
+h1{
+	font-size: 3.3em;
+	font-weight: 700;
+	font-family: 'Open Sans',sans-serif;
+}
+#ptitle a{
+	text-decoration: none;
+	color:#333;
+}
+
+.post-meta-div{
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	margin: 0 0 22px;
+	padding: 10px 0;
+	font-size: 1em;
+}
+
+@media (min-width: 750px){
+	.rightC{
+		padding: 4.1%;
+	}
+}
+@media (max-width: 550px){
+	.container{
+		width: 100%!important;
+		padding: 0;
+	}
+	.rightC{
+		padding: 4.1%;
+	}
+}
+
+/** CSS FORSURE STO OSTAJE */
+blockquote{
+	border-left: 6px solid lightgray;
+	padding-left: 4%;
+	border-radius: 1px;
+	margin-left: 0.5%;
+}
+/* CSS FORSURE STO OSTAJE **/
+
+/** MELTDOWN STILOVI */
+.meltdown_wrap{
+			width: 100%!important;
+			margin:0!important;
+			padding:0!important;
+			resize:none!important;
+		}
+		.meltdown_topmargin{
+			margin:0!important;
+		}
+		.meltdown_editor-wrap{
+			min-width: 0px!important;
+			max-width: 100%!important;
+			width:47.5%!important;
+		}
+		.meltdown_preview-wrap{
+			padding-top: 2px;
+			padding-bottom: 0px!important;
+			min-width: 0px!important;
+			max-width: 1000px!important;
+			width:718px!important;
+		}
+		.meltdown_preview-wrap2{
+			padding-left: 0px!important;
+		}
+		.meltdown_preview-header{
+			display:none!important;
+		}
+		.meltdown-resizehandle, .meltdown_resizehandle-vert, .meltdown-resizehandle-horiz{
+			display:none!important;
+		}
+		.meltdown_editor, .meltdown_preview{
+			padding-bottom:0;
+			padding-top:0;
+			height: 275px;
+		}
+		#my_textarea {
+			border:none;
+		}
+		
+		.no-margin-bottom{
+	margin-bottom: 5px;
+}
+
+textarea{
+	resize:none;
+}
+
+/* MELTDOWN STILOVI **/

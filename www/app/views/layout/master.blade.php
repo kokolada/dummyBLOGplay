@@ -10,10 +10,9 @@
 
 	{{HTML::style('css/normalize.css')}}
 	{{HTML::style('css/skeleton.css')}}
-	{{HTML::style('css/stil.css')}}
+	{{HTML::style('css/stil2.css')}}
 
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -29,11 +28,11 @@
 		@include('components.header') 					<!-- row -->
 
 		<div class="row"> 								<!-- row -->
-			<div class="two columns">
+			<div class="three columns">
 				@include('components.sidebar')
 			</div>
 
-			<div class="ten columns">
+			<div class="eight columns">
 				@yield('content')
 			</div>
 		</div>

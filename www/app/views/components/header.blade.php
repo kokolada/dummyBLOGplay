@@ -1,9 +1,9 @@
-<div class="row">
+<!--<div class="row">
 	<div class="two columns">
 		<a href="{{route('admin')}}">admin login</a>
 			<div id="avatar">
-				<img src="http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-31643.jpg" alt="">
-				<a href="{{route('about')}}"><button id="about-me-text">About Me</button></a>
+				<a href="{{route('about')}}"><img src="http://th08.deviantart.net/fs70/PRE/i/2010/263/b/c/face_by_tourprague-d2z4v26.jpg" alt="">
+				<span id="about-me-text">About Me</span></a>
 			</div>
 	</div>
 
@@ -18,10 +18,11 @@
     		</ol>
 
 			<ul>
-				<li class="active">Blog</li>
-				<li>Journal</li>
-				<li>both</li>
+				<a href="#" class="active"><li>Blog</li></a>
+				<a href="#"><li>Journal</li></a>
+				<a href="#"><li>both</li></a>
 			</ul>
 		</div>
 	</div>
 </div>
+-->

@@ -6,6 +6,6 @@ class Post extends Eloquent{
 	protected $table = 'blogPosts';
 
 	 public function getCreatedAtAttribute($attr) {        
-        return Carbon::parse($attr)->format('l, jS \\of F Y \\a\\t H:i');
+        return Carbon::parse($attr)->format('l, jS \\of F Y');
     }
 }

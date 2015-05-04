@@ -1,7 +1,6 @@
 @foreach($posts as $post)
 	@include('components.post')
-    <a href="{{route('post', $post->id)}}#disqus_thread">Comments</a>
-	<hr />
+    <a href="{{route('post', $post->id)}}#disqus_thread" id="komenetari">Comments</a>
 @endforeach
 
 <script type="text/javascript">
